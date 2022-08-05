@@ -1,11 +1,12 @@
 <?php
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm-password']) 
-&& isset($_FILES['profile-image'])&& isset($_POST['shipper-select'])) {
+&& isset($_FILES['profile-image'])&& isset($_POST['business-name']) && isset($_POST['business-address'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm-password'];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $selectedHub = $_POST['shipper-select'];
+    $businessName = $_POST['business-name'];
+    $businessAddress = $_POST['business-address'];
     $error = array();
 
     $readData = fopen('../../accounts.db', 'r');
@@ -59,7 +60,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         flock($writeData, LOCK_UN);
         fclose($writeData);
 
-        $newAccountData = [$username, $password, "3", $selectedHub];
+        $newAccountData = [$username, $password, "2", $businessName, $businessAddress];
 
         $writeData = fopen('../../accounts.db', 'a');
         flock($writeData, LOCK_EX);

@@ -1,11 +1,12 @@
 <?php
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm-password']) 
-&& isset($_FILES['profile-image'])&& isset($_POST['shipper-select'])) {
+&& isset($_FILES['profile-image'])&& isset($_POST['name']) && isset($_POST['address'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm-password'];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $selectedHub = $_POST['shipper-select'];
+    $name = $_POST['name'];
+    $address = $_POST['address'];
     $error = array();
 
     $readData = fopen('../../accounts.db', 'r');
@@ -18,16 +19,9 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
     foreach($accountData as $line) {
         $currentUsername = $line[0];
         if ($username == $currentUsername) {
+
             array_push($error, "Existed Username");
             break;
-        }
-        if ($line[2] == "2") {
-            if ($businessName == $line[3]) {
-                array_push($error, "Existed Business Name");
-            }
-            if ($businessAddress == $line[4]) {
-                array_push($error, "Existed Business Address");
-            }
         }
     }
 
@@ -59,7 +53,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         flock($writeData, LOCK_UN);
         fclose($writeData);
 
-        $newAccountData = [$username, $password, "3", $selectedHub];
+        $newAccountData = [$username, $password, "1", $name, $address];
 
         $writeData = fopen('../../accounts.db', 'a');
         flock($writeData, LOCK_EX);
@@ -68,6 +62,6 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         fclose($writeData);
         header("location: ../login/login.php");
     } else {
-        print_r($error);
+        echo "Dit me may loi r";
     }
 }
