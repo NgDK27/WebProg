@@ -50,11 +50,11 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         $fileExplode = explode('.', $fileName);
         $fileExt = strtolower(end($fileExplode));;
         $newFileName = uniqid('') . "." . $fileExt;
-        $fileLocation = '../profileImages/' . $newFileName;
+        $fileLocation = '../profile-images/' . $newFileName;
         move_uploaded_file($_FILES['profile-image']["tmp_name"], $fileLocation);
         $imgData = [$username, $newFileName];
 
-        $writeData = fopen('../profileImages/profileImages.db', 'a');
+        $writeData = fopen('../profile-images/profile-images.db', 'a');
         flock($writeData, LOCK_EX);
         fputcsv($writeData, $imgData);
         flock($writeData, LOCK_UN);

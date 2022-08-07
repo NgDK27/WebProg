@@ -33,7 +33,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['subm
     }
 
     // Read profile images database
-    $readImageData = fopen('../profileImages/profileImages.db', 'r');
+    $readImageData = fopen('../profile-images/profile-images.db', 'r');
     flock($readImageData, LOCK_SH);
     $imageData = array();
     while ($line = fgetcsv($readImageData)) {
@@ -55,7 +55,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['subm
         $_SESSION['userType'] = $userType;
         $_SESSION['name'] = $name;
         $_SESSION['address'] = $address;
-        $_SESSION['profileImage'] = $imageFile;
+        $_SESSION['profile-image'] = $imageFile;
 
         print_r($_SESSION);
         header("location: ../index.php");

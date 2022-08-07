@@ -31,9 +31,8 @@ include('../includes/header.php');
             <label for="profile-image" class="form-label">Profile Images</label>
             <input class="form-control" type="file" id="profile-image" name="profile-image">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
     </form>
-
 </div>
 <?php
 include('../includes/footer.php');

@@ -22,7 +22,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/www/myAccount/myAccount.php">My account</a>
+                            <a class="nav-link" href="/www/my-account/my-account.php">My account</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Pricing</a>
