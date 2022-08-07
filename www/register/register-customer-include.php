@@ -44,7 +44,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         $fileExt = strtolower(end($fileExplode));;
         $newFileName = uniqid('') . "." . $fileExt;
         $fileLocation = '../profileImages/' . $newFileName;
-        move_uploaded_file($_FILES['profile-image']["tmp_name"], $fileLocation);
+        move_uploaded_file($_FILES['profile-image']['tmp_name'], $fileLocation);
         $imgData = [$username, $newFileName];
 
         $writeData = fopen('../profileImages/profileImages.db', 'a');
@@ -53,7 +53,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         flock($writeData, LOCK_UN);
         fclose($writeData);
 
-        $newAccountData = [$username, $password, "1", $name, $address];
+        $newAccountData = [$username, $hashedPassword, "1", $name, $address];
 
         $writeData = fopen('../../accounts.db', 'a');
         flock($writeData, LOCK_EX);
@@ -62,6 +62,6 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         fclose($writeData);
         header("location: ../login/login.php");
     } else {
-        echo "Dit me may loi r";
+        print_r($error);
     }
 }

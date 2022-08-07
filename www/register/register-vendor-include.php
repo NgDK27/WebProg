@@ -60,7 +60,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         flock($writeData, LOCK_UN);
         fclose($writeData);
 
-        $newAccountData = [$username, $password, "2", $businessName, $businessAddress];
+        $newAccountData = [$username, $hashedPassword, "2", $businessName, $businessAddress];
 
         $writeData = fopen('../../accounts.db', 'a');
         flock($writeData, LOCK_EX);
