@@ -52,7 +52,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['subm
 
     if ($accountExisted && password_verify($_POST['password'], $hashedPassword)) {
         $_SESSION['username'] = $username;
-        $_SESSION['userType'] = $userType;
+        $_SESSION['user-type'] = $userType;
         $_SESSION['name'] = $name;
         $_SESSION['address'] = $address;
         $_SESSION['profile-image'] = $imageFile;

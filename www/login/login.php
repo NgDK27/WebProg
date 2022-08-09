@@ -23,6 +23,7 @@ include('../includes/header.php');
   <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
+<a href="../register/register-customer.php">Don't have an account, create one now</a>
 <?php
 include('../includes/footer.php');
 ?>

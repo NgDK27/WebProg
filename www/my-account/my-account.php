@@ -5,14 +5,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: ../login/login.php?error=notLoggedIn");
 }
 
-echo $_SESSION['username'];
-echo "<br>";
-echo $_SESSION['userType'];
-echo "<br>";
-echo $_SESSION['name'];
-echo "<br>";
-echo $_SESSION['address'];
-echo "<br>";
+print_r($_SESSION);
 ?>
 <img src="../profile-images/<?php
 echo $_SESSION['profile-image'];?>" alt="">
