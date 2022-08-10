@@ -24,6 +24,20 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/www/my-account/my-account.php">My account</a>
                         </li>
+                        <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "1"): ?>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/www/customer/view-product.php">View product</a>
+                        </li>
+                        <?php endif ;?>
+                        <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "2"): ?>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/www/vendor/add-new-product.php">Add new product</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/www/vendor/view-product.php">View product</a>
+                        </li>
+                        <?php endif ;?>
+                        
                     </ul>
                 </div>
             </div>
