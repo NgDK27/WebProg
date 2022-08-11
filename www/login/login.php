@@ -11,16 +11,16 @@ include('../includes/header.php');
 ?>
 <link rel="stylesheet" href="login.css">
 <div id="login-container">
-<form action="login-include.php" method="POST">
-  <div class="mb-3">
-    <label for="username" class="form-label">Username</label>
-    <input type="text" class="form-control" id="username" name="username">
+<form action="login-include.php" method="POST" >
+  <div>
+    <label for="username" >Username</label>
+    <input type="text"  id="username" name="username">
   </div>
-  <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password" name="password">
+  <div>
+    <label for="password" >Password</label>
+    <input type="password" id="password" name="password">
   </div>
-  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit">Login</button>
 </form>
 </div>
 <a href="../register/register-customer.php">Don't have an account, create one now</a>

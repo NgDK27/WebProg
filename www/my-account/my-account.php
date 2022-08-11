@@ -13,10 +13,10 @@ echo $_SESSION['profile-image'];?>" alt="">
 <div class="form-container">
 <form action="my-account-include.php" enctype="multipart/form-data" method="post">
         <div class="mb-3 form-field">
-            <label for="profile-image" class="form-label">Change profile images</label>
-            <input class="form-control" type="file" id="profile-image" name="profile-image">
+            <label for="profile-image">Change profile images</label>
+            <input type="file" id="profile-image" name="profile-image">
         </div>
-        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+        <button type="submit" name="submit">Submit</button>
     </form>
 </div>
 <a href="../login/login.php?logout=true">
