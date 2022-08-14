@@ -13,7 +13,7 @@ if (isset($_POST['product-name']) && isset($_POST['price']) && isset($_POST['des
     $fileName = $_FILES['product-image']['name'];
     $fileExplode = explode('.', $fileName);
     $fileExt = strtolower(end($fileExplode));;
-    $newFileName = uniqid('') . "." . $fileExt;
+    $newFileName = substr($productId, 0, 14) . "." . $fileExt;
     $fileLocation = '../products-images/' . $newFileName;
     move_uploaded_file($_FILES['product-image']['tmp_name'], $fileLocation);
     $productImgData = [$productId, $newFileName];

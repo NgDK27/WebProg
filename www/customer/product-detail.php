@@ -14,11 +14,38 @@ while ($line = fgetcsv($readProductData)) {
 }
 fclose($readProductData);
 
-$header = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$productId = $_GET['id'];
+$id = substr($productId, 0, 14);
+$location = '';
 
-foreach ($productData as $product) {
-    if (str_contains($header, $product[0]) == true) {
-        print_r($product);
+$mydir = '../products-images'; 
+$myfiles = array_diff(scandir($mydir), array('.', '..')); 
+foreach ($myfiles as $filename) {
+    if (str_contains($filename, $id)) {
+        $location .= $filename;
     }
 }
 ?>
+
+<body>
+    <?php foreach ($productData as $product) : ?>
+        <?php if ($product[0] == $productId) : ?>
+        
+            <section class="product">
+
+                <h3 class="name"><?php echo $product[2]?></h3>
+                <div class="pic">
+                    <img src="../products-images/<?php echo $location;?>" alt="">
+                </div>
+                <span class="price"><?php echo $product[3]?></span>
+                <label for="qty" class="quantity"><strong>Quantity:</strong>
+                    <input type="text" id="qty" name="itemQuantity" class="quantity-input" value="1">
+                    <button class="cart-btn" href="#" type="submit" role="submit">Add to cart</button>
+                </label>
+                
+            </section>
+
+        <?php break; endif ?>
+    <?php endforeach; ?>
+    <script type="text/javascript" src="cart.js "></script>
+</body>

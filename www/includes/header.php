@@ -22,6 +22,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/www/customer/view-product.php">View product</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/www/customer/cart.php">Cart</a>
+                        </li>
                         <?php endif ;?>
                         <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "2"): ?>
                         <li class="nav-item">
