@@ -10,15 +10,17 @@ addToCartButton.addEventListener("click", () => {
     var object = JSON.parse(localStorage.getItem(productId));
     object["quantity"] += Number(quantity);
     localStorage.setItem(productId, JSON.stringify(object));
+    alert("Your item has been added to cart");
   } else {
     let updatedQuantity =
       Number(localStorage.getItem(productId)) + Number(quantity);
     var object = {
       name: productName,
       quantity: updatedQuantity,
-      price: productPrice,
+      price: productPrice * updatedQuantity,
       pic: productPic,
     };
     localStorage.setItem(productId, JSON.stringify(object));
+    alert("Your item has been added to cart");
   }
 });
