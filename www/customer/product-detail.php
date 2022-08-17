@@ -32,20 +32,20 @@ foreach ($myfiles as $filename) {
         <?php if ($product[0] == $productId) : ?>
         
             <section class="product">
-
-                <h3 class="name"><?php echo $product[2]?></h3>
+                <?php $id = $product[0] ?>
+                <h3 id="id"><?php echo $id ?></h3>
+                <h3 name="itemName" id="itemName"><?php echo $product[2]?></h3>
                 <div class="pic">
-                    <img src="../products-images/<?php echo $location;?>" alt="">
+                    <img name="itemPicPath" id="itemPic" src="../products-images/<?php echo $location;?>" alt="">
                 </div>
-                <span class="price"><?php echo $product[3]?></span>
+                <span name='itemPrice' id="itemPrice"><?php echo $product[3]?></span>
                 <label for="qty" class="quantity"><strong>Quantity:</strong>
-                    <input type="text" id="qty" name="itemQuantity" class="quantity-input" value="1">
-                    <button class="cart-btn" href="#" type="submit" role="submit">Add to cart</button>
+                    <input type="number" id="qty" name="itemQuantity" class="quantity-input">
+                    <button class="cart-btn" id="addToCart" href="#" type="submit" role="submit">Add to cart</button>
                 </label>
-                
             </section>
 
         <?php break; endif ?>
     <?php endforeach; ?>
-    <script type="text/javascript" src="cart.js "></script>
+<script src="addProduct.js"></script>
 </body>
