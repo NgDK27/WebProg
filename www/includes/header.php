@@ -12,13 +12,13 @@
     <header>
         <nav>
             <div>
-                <a href="/index.php">LOZODO</a>
+                <a href="/www/index.php">LOZODO</a>
                 <div>
                     <ul>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/my-account/my-account.php">My account</a>
-                        </li>
                         <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "1"): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/www/my-account/my-account.php">My account</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/www/customer/view-product.php">View product</a>
                         </li>
@@ -28,10 +28,21 @@
                         <?php endif ;?>
                         <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "2"): ?>
                         <li class="nav-item">
+                            <a class="nav-link" href="/www/my-account/my-account.php">My account</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/www/vendor/add-new-product.php">Add new product</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/www/vendor/view-product.php">View product</a>
+                        </li>
+                        <?php endif ;?>
+                        <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "3"): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/www/my-account/my-account.php">My account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/www/shipper/view-order.php">View orders</a>
                         </li>
                         <?php endif ;?>
 
