@@ -46,20 +46,36 @@ removeBtn.forEach((btn) => {
     let idProductRemove =
       productRemove.getElementsByTagName("h3")[3].textContent;
     for (var i = 0, len = localStorage.length; i < len; ++i) {
-      // let details = localStorage.getItem(localStorage.key(i));
       const id = localStorage.key(i);
       if (id.includes(idProductRemove)) {
         localStorage.removeItem(id);
         productRemove.remove();
+        location.reload();
+        return false;
       }
     }
   });
 });
+
+// Count total
+
+let total = 0;
+
+let productDetails = document.querySelectorAll(".product");
+
+productDetails.forEach((detail) => {
+  // let productPrice = productDetails.getElementsByTagName("h3")[4].textContent;
+  let productPrice = Number(detail.children[2].textContent);
+  total += productPrice;
+});
+
+const totalPrice = document.getElementById("total");
+totalPrice.append(total);
 
 // Clear the localstorage after finish order
 
 const completeOrderButton = document.getElementById("complete-order");
 completeOrderButton.addEventListener("click", () => {
   localStorage.clear();
-  alert("Ordered succesful");
+  alert("Order succeed");
 });

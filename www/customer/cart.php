@@ -11,6 +11,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
         <ul id="item-list">
     
         </ul>
+        <span id="total">Total price: </span>
     </div>
     <div class="form-container">
         <form action="cart-include.php" method="POST" id="cart-form">
