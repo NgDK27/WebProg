@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="product-detail.css">
 <?php
 session_start();
 include('../includes/header.php');
 if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
     header("Location: ../my-account/my-account.php?error=invalidaccount");
 }
-?>
-<?php 
+
 $readProductData = fopen("../data/product.db", 'r');
 flock($readProductData, LOCK_SH);
 $productData = array();
@@ -27,7 +25,7 @@ foreach ($myfiles as $filename) {
     }
 }
 ?>
-
+<link rel="stylesheet" href="product-detail.css">
 <body>
     <?php foreach ($productData as $product) : ?>
         <?php if ($product[0] == $productId) : ?>

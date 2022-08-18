@@ -6,11 +6,18 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
 }
 ?>
 
-<div class="cart-container">
-    <ul id="item-list">
-
-    </ul>
-</div>
+<body>
+    <div class="cart-container">
+        <ul id="item-list">
+    
+        </ul>
+    </div>
+    <div class="form-container">
+        <form action="cart-include.php" method="POST" id="cart-form">
+            <button type="submit" id="complete-order">Complete Order</button>
+        </form>
+    </div>
+</body>
 
 
 

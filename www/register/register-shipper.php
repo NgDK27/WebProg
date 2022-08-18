@@ -24,7 +24,7 @@ include('../includes/header.php');
                 <?php
                  $readData = fopen('../Data/distributionhub.db', 'r');
                  flock($readData, LOCK_SH);
-                 $hunData = array();
+                 $hubData = array();
                  while ($line = fgetcsv($readData)) {
                      $hubData[] = $line;
                  }

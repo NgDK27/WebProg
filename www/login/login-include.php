@@ -14,6 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['subm
     $username;
     $hashedPassword;
     $userType = '0';
+    $hub;
     $name;
     $address;
     $imageFile;
@@ -26,6 +27,10 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['subm
             $username = $account[0];
             $hashedPassword = $account[1];
             $userType = $account[2];
+            if ($userType == '3') {
+                $hub = $account[3];
+                break;
+            }
             $name = $account[3];
             $address = $account[4];
             break;
@@ -53,11 +58,13 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['subm
     if ($accountExisted && password_verify($_POST['password'], $hashedPassword)) {
         $_SESSION['username'] = $username;
         $_SESSION['user-type'] = $userType;
-        $_SESSION['name'] = $name;
-        $_SESSION['address'] = $address;
         $_SESSION['profile-image'] = $imageFile;
-
-        print_r($_SESSION);
+        if ($userType == "3") {
+            $_SESSION['hub'] = $hub;
+        } else {
+            $_SESSION['name'] = $name;
+            $_SESSION['address'] = $address;
+        }
         header("location: ../index.php");
     } else {
         header("location: ./login.php?error=1");

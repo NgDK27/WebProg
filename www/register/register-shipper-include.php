@@ -21,14 +21,6 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
             array_push($error, "Existed Username");
             break;
         }
-        if ($line[2] == "2") {
-            if ($businessName == $line[3]) {
-                array_push($error, "Existed Business Name");
-            }
-            if ($businessAddress == $line[4]) {
-                array_push($error, "Existed Business Address");
-            }
-        }
     }
 
     if ($password != $confirmPassword) {
