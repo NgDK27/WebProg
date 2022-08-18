@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="product-detail.css">
 <?php
 session_start();
 include('../includes/header.php');
@@ -40,7 +41,7 @@ foreach ($myfiles as $filename) {
                 </div>
                 <span name='itemPrice' id="itemPrice"><?php echo $product[3]?></span>
                 <label for="qty" class="quantity"><strong>Quantity:</strong>
-                    <input type="number" id="qty" name="itemQuantity" class="quantity-input">
+                    <input type="number" id="qty" name="itemQuantity" value=1 class="quantity-input">
                     <button class="cart-btn" id="addToCart" href="#" type="submit" role="submit">Add to cart</button>
                 </label>
             </section>

@@ -45,15 +45,31 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             foreach ($productData as $product) {
                 $price = $product[3];
                 if ($price > $_GET['min-price'] && $price < $_GET['max-price']) {
-                    echo "<li>";
                     $id = $product[0];
+                    $vendor = $product[1];
+                    $name = $product[2];
+                    $location = "";
+                    $mydir = '../products-images'; 
+                    $myfiles = array_diff(scandir($mydir), array('.', '..')); 
+                    foreach ($myfiles as $filename) {
+                        if (str_contains($filename, substr($id, 0, 14))) {
+                            $location .= $filename;
+                            break;
+                        }
+                    }
+                    echo "<li>";
                     echo "<a href= \"product-detail.php?id=$id\">";
                     echo "<div>";
-                    print_r($product);
+                    print_r($name);
+                    echo "</div>";
                     echo "<div>";
+                    print_r($price);
+                    echo "</div>";
+                    echo "<div>";
+                    echo '<img src="../products-images/' . $location . '" alt="">';
+                    echo "</div>";
                     echo "</a>";
                     echo "</li>";
-                    $count += 1;
                 }
             }
 
@@ -65,24 +81,60 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             foreach ($productData as $product) {
                 $productName = strtolower($product[2]);
                 if (str_contains($productName, $userInput)) {
-                    echo "<li>";
                     $id = $product[0];
+                    $vendor = $product[1];
+                    $name = $product[2];
+                    $price = $product[3];
+                    $location = "";
+                    $mydir = '../products-images'; 
+                    $myfiles = array_diff(scandir($mydir), array('.', '..')); 
+                    foreach ($myfiles as $filename) {
+                        if (str_contains($filename, substr($id, 0, 14))) {
+                            $location .= $filename;
+                            break;
+                        }
+                    }
+                    echo "<li>";
                     echo "<a href= \"product-detail.php?id=$id\">";
                     echo "<div>";
-                    print_r($product);
+                    print_r($name);
+                    echo "</div>";
                     echo "<div>";
+                    print_r($price);
+                    echo "</div>";
+                    echo "<div>";
+                    echo '<img src="../products-images/' . $location . '" alt="">';
+                    echo "</div>";
                     echo "</a>";
                     echo "</li>";
                 }
             }
         } else {
             foreach ($productData as $product) {
-                echo "<li>";
                 $id = $product[0];
+                $vendor = $product[1];
+                $name = $product[2];
+                $price = $product[3];
+                $location = "";
+                $mydir = '../products-images'; 
+                $myfiles = array_diff(scandir($mydir), array('.', '..')); 
+                foreach ($myfiles as $filename) {
+                    if (str_contains($filename, substr($id, 0, 14))) {
+                        $location .= $filename;
+                        break;
+                    }
+                }
+                echo "<li>";
                 echo "<a href= \"product-detail.php?id=$id\">";
                 echo "<div>";
-                print_r($product);
+                print_r($name);
+                echo "</div>";
                 echo "<div>";
+                print_r($price);
+                echo "</div>";
+                echo "<div>";
+                echo '<img src="../products-images/' . $location . '" alt="">';
+                echo "</div>";
                 echo "</a>";
                 echo "</li>";
             }
