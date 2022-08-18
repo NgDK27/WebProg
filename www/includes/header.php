@@ -20,18 +20,18 @@
                         </li>
                         <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "1"): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/customer/view-product.php">View product</a>
+                            <a class="nav-link" href="/www/customer/view-product.php">View product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/customer/cart.php">Cart</a>
+                            <a class="nav-link" href="/www/customer/cart.php">Cart</a>
                         </li>
                         <?php endif ;?>
                         <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "2"): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/vendor/add-new-product.php">Add new product</a>
+                            <a class="nav-link" href="/www/vendor/add-new-product.php">Add new product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/vendor/view-product.php">View product</a>
+                            <a class="nav-link" href="/www/vendor/view-product.php">View product</a>
                         </li>
                         <?php endif ;?>
 

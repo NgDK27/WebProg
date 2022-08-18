@@ -17,6 +17,12 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             <button type="submit" id="complete-order">Complete Order</button>
         </form>
     </div>
+    <div class="back">
+        <button class="backBtn">
+        <a href="view-product.php">Continue shopping</a>
+        </button>
+    </div>
+
 </body>
 
 
