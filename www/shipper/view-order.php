@@ -17,8 +17,19 @@ fclose($readData);
 
 foreach ($orderData as $order) {
     if ($_SESSION["hub"] == $order[2]) {
-        print_r($order);
+        if ($order[3] == "active") {
+            $id = $order[0];
+            echo "<li>";
+            echo "<a href= \"order-detail.php?id=$id\">";
+            echo "<div>";
+            print_r($id);
+            echo "</div>";
+            echo "</a>";
+            echo "</li>";
+        }
     }
 }
 
 ?>
+
+
