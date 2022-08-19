@@ -11,12 +11,19 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
         <ul id="item-list">
     
         </ul>
+        <span id="total">Total price: </span>
     </div>
     <div class="form-container">
         <form action="cart-include.php" method="POST" id="cart-form">
             <button type="submit" id="complete-order">Complete Order</button>
         </form>
     </div>
+    <div class="back">
+        <button class="backBtn">
+        <a href="view-product.php">Continue shopping</a>
+        </button>
+    </div>
+
 </body>
 
 

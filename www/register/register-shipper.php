@@ -42,6 +42,9 @@ include('../includes/header.php');
             <input type="file" id="profile-image" name="profile-image">
         </div>
         <button type="submit" name="submit">Submit</button>
+        <div>
+            <a href="../login/login.php">Already have an account ? Log in</a>
+        </div>
     </form>
 
 </div>
