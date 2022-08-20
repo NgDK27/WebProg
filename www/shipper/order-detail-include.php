@@ -15,9 +15,6 @@ if (isset($_GET["status"]) && isset($_GET["id"])) {
         }
     }
 
-    
-   print_r($orderData);
-
     $writeData = fopen('../Data/order.db', 'w');
     flock($writeData, LOCK_EX);
     foreach ($orderData as $order) {
@@ -25,7 +22,7 @@ if (isset($_GET["status"]) && isset($_GET["id"])) {
     }
     flock($writeData, LOCK_UN);
     fclose($writeData);
-    header("Location: view-order.php");
+    header("Location: order-detail.php?id=".$_GET['id']);
 
 }
 ?>
