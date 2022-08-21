@@ -14,6 +14,15 @@ while ($line = fgetcsv($readData)) {
 fclose($readData);
 
 $orderId = $_GET['id'];
+
+$readData = fopen('../Data/product.db', 'r');
+flock($readData, LOCK_SH);
+$productData = array();
+while ($line = fgetcsv($readData)) {
+    $productData[] = $line;
+}
+fclose($readData);
+
 ?>
 
 <body>
@@ -26,6 +35,16 @@ $orderId = $_GET['id'];
             <h3 id="hub"><?php echo "Hub: " . $order[2]?></h3>
             <h3 name='status' id="status"><?php echo "Status: " . $order[3]?></h3>
             
+            <?php foreach ($order as $orderInfo) : ?>
+                <?php if (str_contains($orderInfo, ':')) : ?>
+                    <?php foreach ($productData as $product) : ?>
+                        <?php if (str_contains($product[0], substr($orderInfo, 0, 14))) : ?>
+                            <h3 id="product"><?php echo $product[2] . substr($orderInfo, 23, 10); ?></h3>
+                        <?php endif ?>
+                    <?php endforeach; ?>
+                <?php endif ?>
+            <?php endforeach; ?>
+
             <?php if ($order[3] == "active") : ?>
             <a href="./order-detail-include.php?status=delievered&id=<?php echo $orderId ?>">Change to delivered</a>
             <a href="./order-detail-include.php?status=canceled&id=<?php echo $orderId ?>">Change to canceled</a>

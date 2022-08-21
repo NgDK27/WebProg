@@ -4,9 +4,9 @@ include('../includes/header.php');
 <link rel="stylesheet" href="register-shared.css">
 <div class="register-form-container">
     <form action="register-shipper-include.php" enctype="multipart/form-data" method="post">
-        <h1>Register to buy from our platform</h1>
-        <a href="register-shipper.php">Register to be a shipper</a>
-        <a href="register-vendor.php">Register to be a vendor</a>
+        <h1>Register to become be a shipper</h1>
+        <a href="register-shipper.php">Register to become a shipper</a>
+        <a href="register-vendor.php">Register to become a vendor</a>
         <div>
             <label for="username">Username</label>
             <input type="text" id="username" name="username">
