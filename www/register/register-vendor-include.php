@@ -38,12 +38,12 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
 
     $passwordCondition = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,20}$/';
     if (!preg_match($passwordCondition, $password)) {
-        array_push($error, "Password does not meet the requirement");
+        array_push($error, "Password must contains at least one upper case letter, at least one lower case letter, at least one digit, at least one special letter in the set !@#$%^&*, NO other kind of characters, has a length from 8 to 20 characters");
     }
 
     $usernameCondition = '/^[A-Za-z0-9]{8,15}$/';
     if (!preg_match($usernameCondition, $username)) {
-        array_push($error, "Username does not meet the requirement");;
+        array_push($error, "Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters, unique");
     }
     if (count($error) == 0) {
         $fileName = $_FILES['profile-image']['name'];
