@@ -17,9 +17,33 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
         fclose($readProductData);
 
         foreach ($productData as $product) {
+            $id = substr($product[0], 0, 14);
+            $productName = $product[2];
+            $price = $product[3];
+            $descript = $product[4];
+            $location = "";
+            $mydir = '../products-images'; 
+            $myfiles = array_diff(scandir($mydir), array('.', '..')); 
+            foreach ($myfiles as $filename) {
+                if (str_contains($filename, substr($id, 0, 14))) {
+                    $location .= $filename;
+                    break;
+                }
+            }
             if ($product[1] == $_SESSION['username']) {
                 echo "<li>";
-                print_r($product);
+                echo "<div>";
+                print_r($productName);
+                echo "</div>";
+                echo "<div>";
+                print_r($price);
+                echo "</div>";
+                echo "<div>";
+                print_r($descript);
+                echo "</div>";
+                echo "<div>";
+                echo '<img src="../products-images/' . $location . '" alt="">';
+                echo "</div>";
                 echo "</li>";
             }
         }

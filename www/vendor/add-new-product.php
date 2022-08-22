@@ -22,7 +22,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
             <label for="description">Description</label>
         </div>
         <div>
-            <label for="product-image">Profile Images</label>
+            <label for="product-image">Product Images</label>
             <input type="file" id="product-image" name="product-image">
         </div>
         <button type="submit" name="submit">Submit</button>

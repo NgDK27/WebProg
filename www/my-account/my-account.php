@@ -8,13 +8,17 @@ if (!isset($_SESSION['username'])) {
 echo '<h3>' . $_SESSION['username'] .'</h3>';
 if ($_SESSION['user-type'] == 1) {
     echo '<h3>Customer</h3>';
+    echo '<h3>' . $_SESSION['name'] .'</h3>';
+    echo '<h3>' . $_SESSION['address'] .'</h3>';
 } elseif (($_SESSION['user-type'] == 2)) {
     echo '<h3>Vendor</h3>';
+    echo '<h3>' . $_SESSION['name'] .'</h3>';
+    echo '<h3>' . $_SESSION['address'] .'</h3>';
 } else {
     echo '<h3>Shipper</h3>';
+    echo '<h3>' . $_SESSION['hub'] .'</h3>';
 }
-echo '<h3>' . $_SESSION['name'] .'</h3>';
-echo '<h3>' . $_SESSION['address'] .'</h3>';
+
 ?>
 <img src="../profile-images/<?php
 echo $_SESSION['profile-image'];?>" alt="">
