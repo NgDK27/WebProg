@@ -57,6 +57,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                             break;
                         }
                     }
+                    $count += 1;
                     echo "<li>";
                     echo "<a href= \"product-detail.php?id=$id\">";
                     echo "<div>";

@@ -11,19 +11,19 @@ include('../includes/header.php');
 ?>
 <link rel="stylesheet" href="login.css">
 <div id="login-container">
-<form action="login-include.php" method="POST" >
-  <div>
+<form class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow-lg outside-box" action="login-include.php" method="POST" >
+  <div class="form-floating mb-3">
     <label for="username" >Username</label>
-    <input type="text"  id="username" name="username">
+    <input type="text" class="form-control" id="username" name="username">
   </div>
-  <div>
+  <div class="form-floating mb-3">
     <label for="password" >Password</label>
-    <input type="password" id="password" name="password">
+    <input type="password" class="form-control" id="password" name="password">
   </div>
-  <button type="submit" name="submit">Login</button>
+  <a href="../register/register-customer.php">Don't have an account, create one now</a>
+  <button type="submit" class="btn btn-primary btn-lg" name="submit">Login</button>
 </form>
 </div>
-<a href="../register/register-customer.php">Don't have an account, create one now</a>
 <?php
 include('../includes/footer.php');
 ?>
