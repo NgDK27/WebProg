@@ -63,4 +63,8 @@ fclose($readData);
 
         <?php break; endif ?>
     <?php endforeach; ?>
+<?php
+include('../includes/footer.php');
+?>
 </body>
+

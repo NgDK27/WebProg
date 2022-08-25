@@ -31,5 +31,8 @@ foreach ($orderData as $order) {
 }
 
 ?>
+<?php
+include('../includes/footer.php');
+?>
 
 
