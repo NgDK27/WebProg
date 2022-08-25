@@ -22,7 +22,7 @@
                             <a class="nav-link" href="/www/customer/view-product.php">View product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/customer/cart.php">Cart</a>
+                            <a class="nav-link" href="/www/customer/cart.php">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/www/my-account/my-account.php">My account</a>
@@ -33,7 +33,7 @@
                             <a class="nav-link" href="/www/vendor/view-product.php">View product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/vendor/add-new-product.php">Add new product</a>
+                            <a class="nav-link" href="/www/vendor/add-new-product.php">Add new product</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/www/my-account/my-account.php">My account</a>
