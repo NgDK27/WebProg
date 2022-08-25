@@ -20,12 +20,11 @@ if (isset($_SESSION['username'])) {
                 $newFileName = uniqid('') . "." . $fileExt;
                 $fileLocation = '../profile-images/' . $newFileName;
                 move_uploaded_file($_FILES['profile-image']['tmp_name'], $fileLocation);
-                $profileImage[1] = $newFileName;
                 $profileImagesData[$i][1] = $newFileName;
                 $_SESSION['profile-image'] = $newFileName;
                 $changed = true;
             } else {
-                    header("Location: ./my-account.php?changeppf=fail");
+                    header("Location: ./my-account.php?changepfp=fail");
             }
         
         }

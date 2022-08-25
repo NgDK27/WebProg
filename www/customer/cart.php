@@ -31,3 +31,6 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
 
 <!-- <script src="addProduct.js"></script> -->
 <script src="cart.js"></script>
+<?php
+include('../includes/footer.php');
+?>

@@ -47,4 +47,7 @@ foreach ($myfiles as $filename) {
         <?php break; endif ?>
     <?php endforeach; ?>
 <script src="addProduct.js"></script>
+<?php
+include('../includes/footer.php');
+?>
 </body>
