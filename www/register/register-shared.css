@@ -6,3 +6,7 @@
 .form-field {
     margin: 2rem auto;
 }
+
+#alert-retype-pass {
+    display: none;
+}

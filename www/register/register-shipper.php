@@ -5,7 +5,7 @@ include('../includes/header.php');
 <div class="register-form-container">
     <form action="register-shipper-include.php" enctype="multipart/form-data" method="post">
         <h1>Register to become be a shipper</h1>
-        <a href="register-shipper.php">Register to become a shipper</a>
+        <a href="register-customer.php">Register to become a customer</a>
         <a href="register-vendor.php">Register to become a vendor</a>
         <div>
             <label for="username">Username</label>
@@ -22,17 +22,17 @@ include('../includes/header.php');
         <div>
             <select id="shipper-select" name="shipper-select">
                 <?php
-                 $readData = fopen('../Data/distributionhub.db', 'r');
-                 flock($readData, LOCK_SH);
-                 $hubData = array();
-                 while ($line = fgetcsv($readData)) {
-                     $hubData[] = $line;
-                 }
-                 fclose($readData);
+                $readData = fopen('../Data/distributionhub.db', 'r');
+                flock($readData, LOCK_SH);
+                $hubData = array();
+                while ($line = fgetcsv($readData)) {
+                    $hubData[] = $line;
+                }
+                fclose($readData);
 
-                 foreach($hubData as $hub) {
+                foreach ($hubData as $hub) {
                     echo "<option value=\"$hub[0]\">$hub[1]</option>";
-                 }
+                }
                 ?>
             </select>
             <label for="shipper-select">Select Distribution Hub</label>
