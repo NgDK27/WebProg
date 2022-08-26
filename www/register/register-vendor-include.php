@@ -1,14 +1,15 @@
+<title>Register</title>
 <?php
 if (
     isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm-password'])
-    && isset($_FILES['profile-image']) && isset($_POST['business-name']) && isset($_POST['business-address'])
+    && isset($_FILES['profile-image']) && isset($_POST['name']) && isset($_POST['address'])
 ) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm-password'];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $businessName = $_POST['business-name'];
-    $businessAddress = $_POST['business-address'];
+    $businessName = $_POST['name'];
+    $businessAddress = $_POST['address'];
     $error = array();
 
     $readData = fopen('../../accounts.db', 'r');
@@ -45,7 +46,7 @@ if (
 
     $usernameCondition = '/^[A-Za-z0-9]{8,15}$/';
     if (!preg_match($usernameCondition, $username)) {
-        array_push($error, "Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters, unique");
+        array_push($error, "Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters");
     }
     if (count($error) == 0) {
         $fileName = $_FILES['profile-image']['name'];

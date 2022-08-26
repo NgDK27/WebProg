@@ -1,3 +1,4 @@
+<title>View order</title>
 <?php
 session_start();
 include('../includes/header.php');
@@ -6,7 +7,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '3') {
 }
 ?>
 
-<?php 
+<?php
 $readData = fopen('../Data/order.db', 'r');
 flock($readData, LOCK_SH);
 $orderData = array();
@@ -34,5 +35,3 @@ foreach ($orderData as $order) {
 <?php
 include('../includes/footer.php');
 ?>
-
-
