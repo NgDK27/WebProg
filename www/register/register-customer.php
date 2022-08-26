@@ -1,3 +1,4 @@
+<title>Register</title>
 <?php
 include('../includes/header.php');
 ?>
@@ -10,17 +11,21 @@ include('../includes/header.php');
         <div class="">
             <label for="username">Username</label>
             <input type="text" id="username" name="username">
-            <!-- <div class=" alert alert-danger length">
-                <p>Minimum length of 5 characters</p>
-            </div> -->
+            <div id="alert-username">
+                <div class="alert alert-danger">
+                    <p>Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters</p>
+                </div>
+            </div>
         </div>
 
         <div class="">
             <label for="password">Password</label>
             <input type="password" id="password" name="password">
-            <!-- <div class=" alert alert-danger pass">
-                <p>Password must contains at least one upper case letter, at least one lower case letter, at least one digit, at least one special letter in the set !@#$%^&*, NO other kind of characters, has a length from 8 to 20 characters</p>
-            </div> -->
+            <div id="alert-pass">
+                <div class="alert alert-danger">
+                    <p>Password must contains at least one upper case letter, at least one lower case letter, at least one digit, at least one special letter in the set !@#$%^&*, NO other kind of characters, has a length from 8 to 20 characters</p>
+                </div>
+            </div>
         </div>
 
         <div class="">
@@ -36,17 +41,21 @@ include('../includes/header.php');
         <div class="">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
-            <!-- <div class=" alert alert-danger length">
-                <p>Minimum length of 5 characters</p>
-            </div> -->
+            <div id="alert-name">
+                <div class="alert alert-danger">
+                    <p>Minimum length of 5 characters</p>
+                </div>
+            </div>
         </div>
 
         <div class="">
             <label for="address">Address</label>
             <input type="text" id="address" name="address">
-            <!-- <div class=" alert alert-danger length">
-                <p>Minimum length of 5 characters</p>
-            </div> -->
+            <div id="alert-address">
+                <div class="alert alert-danger">
+                    <p>Minimum length of 5 characters</p>
+                </div>
+            </div>
         </div>
 
         <div class="">

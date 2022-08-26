@@ -1,3 +1,4 @@
+<title>Register</title>
 <?php
 if (
     isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm-password'])
@@ -37,7 +38,7 @@ if (
 
     $usernameCondition = '/^[A-Za-z0-9]{8,15}$/';
     if (!preg_match($usernameCondition, $username)) {
-        array_push($error, "Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters, unique");
+        array_push($error, "Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters");
     }
     if (count($error) == 0) {
         $fileName = $_FILES['profile-image']['name'];
