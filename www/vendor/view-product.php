@@ -1,3 +1,4 @@
+<title>View product</title>
 <?php
 session_start();
 include('../includes/header.php');
@@ -11,7 +12,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
         $readProductData = fopen("../data/product.db", 'r');
         flock($readProductData, LOCK_SH);
         $productData = array();
-        while ($line = fgetcsv($readProductData)){
+        while ($line = fgetcsv($readProductData)) {
             $productData[] = $line;
         }
         fclose($readProductData);
@@ -22,8 +23,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
             $price = $product[3];
             $descript = $product[4];
             $location = "";
-            $mydir = '../products-images'; 
-            $myfiles = array_diff(scandir($mydir), array('.', '..')); 
+            $mydir = '../products-images';
+            $myfiles = array_diff(scandir($mydir), array('.', '..'));
             foreach ($myfiles as $filename) {
                 if (str_contains($filename, substr($id, 0, 14))) {
                     $location .= $filename;

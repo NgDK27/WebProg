@@ -1,3 +1,4 @@
+<title>Cart</title>
 <?php
 session_start();
 include('../includes/header.php');
@@ -9,7 +10,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
 <body>
     <div class="cart-container">
         <ul id="item-list">
-    
+
         </ul>
         <span id="total">Total price: </span>
     </div>
@@ -20,7 +21,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
     </div>
     <div class="back">
         <button class="backBtn">
-        <a href="view-product.php">Continue shopping</a>
+            <a href="view-product.php">Continue shopping</a>
         </button>
     </div>
 

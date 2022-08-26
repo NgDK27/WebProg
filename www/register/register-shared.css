@@ -6,3 +6,23 @@
 .form-field {
     margin: 2rem auto;
 }
+
+#alert-retype-pass {
+    display: none;
+}
+
+#alert-pass {
+    display: none;
+}
+
+#alert-username {
+    display: none;
+}
+
+#alert-name {
+    display: none;
+}
+
+#alert-address {
+    display: none;
+}

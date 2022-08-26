@@ -1,3 +1,4 @@
+<title>Add new product</title>
 <?php
 session_start();
 include('../includes/header.php');

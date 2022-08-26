@@ -1,3 +1,4 @@
+<title>Register</title>
 <?php
 include('../includes/header.php');
 ?>
@@ -10,23 +11,53 @@ include('../includes/header.php');
         <div>
             <label for="username">Username</label>
             <input type="text" id="username" name="username">
+            <div id="alert-username">
+                <div class="alert alert-danger">
+                    <p>Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters</p>
+                </div>
+            </div>
         </div>
+
         <div>
             <label for="password">Password</label>
             <input type="password" id="password" name="password">
+            <div id="alert-pass">
+                <div class="alert alert-danger">
+                    <p>Password must contains at least one upper case letter, at least one lower case letter, at least one digit, at least one special letter in the set !@#$%^&*, NO other kind of characters, has a length from 8 to 20 characters</p>
+                </div>
+            </div>
         </div>
+
         <div>
             <label for="confirm-password">Confirm password</label>
             <input type="password" id="confirm-password" name="confirm-password">
+            <div id="alert-retype-pass">
+                <div class="alert alert-danger">
+                    <p>Password is not matched</p>
+                </div>
+            </div>
         </div>
+
         <div>
-            <label for="business-name">Business Name</label>
-            <input type="text" id="business-name" name="business-name">
+            <label for="name">Business Name</label>
+            <input type="text" id="name" name="name">
+            <div id="alert-name">
+                <div class="alert alert-danger">
+                    <p>Minimum length of 5 characters</p>
+                </div>
+            </div>
         </div>
+
         <div>
-            <label for="business-address">Business Address</label>
-            <input type="text" id="business-address" name="business-address">
+            <label for="address">Business Address</label>
+            <input type="text" id="address" name="address">
+            <div id="alert-address">
+                <div class="alert alert-danger">
+                    <p>Minimum length of 5 characters</p>
+                </div>
+            </div>
         </div>
+
         <div>
             <label for="profile-image">Profile Images</label>
             <input type="file" id="profile-image" name="profile-image">
@@ -41,3 +72,4 @@ include('../includes/header.php');
 <?php
 include('../includes/footer.php');
 ?>
+<script src="register.js"></script>

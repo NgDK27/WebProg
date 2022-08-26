@@ -1,4 +1,5 @@
-<?php 
+<title>Cart</title>
+<?php
 session_start();
 if (isset($_POST)) {
     if (count($_POST) !== 0) {
@@ -14,7 +15,7 @@ if (isset($_POST)) {
         $customer = $_SESSION['username'];
         $hub = $hubData[array_rand($hubData)][0];
         $result = [$orderId, $customer, $hub, 'active'];
-        foreach($_POST as $key => $value) {
+        foreach ($_POST as $key => $value) {
             $data = $key . ":" . $value;
             array_push($result, $data);
         }
@@ -25,9 +26,9 @@ if (isset($_POST)) {
         flock($writeData, LOCK_UN);
         fclose($writeData);
         header("Location: ../index.php");
-   }
-   echo "There is no item in your cart";
-   echo "<button class='cartBack'>
+    }
+    echo "There is no item in your cart";
+    echo "<button class='cartBack'>
    <a href='view-product.php'>Go back</a>
    </button>";
 }

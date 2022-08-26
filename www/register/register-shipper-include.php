@@ -1,6 +1,9 @@
+<title>Register</title>
 <?php
-if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm-password']) 
-&& isset($_FILES['profile-image'])&& isset($_POST['shipper-select'])) {
+if (
+    isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm-password'])
+    && isset($_FILES['profile-image']) && isset($_POST['shipper-select'])
+) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm-password'];
@@ -15,7 +18,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         $accountData[] = $line;
     }
     fclose($readData);
-    foreach($accountData as $line) {
+    foreach ($accountData as $line) {
         $currentUsername = $line[0];
         if ($username == $currentUsername) {
             array_push($error, "Existed Username");
@@ -34,7 +37,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
 
     $usernameCondition = '/^[A-Za-z0-9]{8,15}$/';
     if (!preg_match($usernameCondition, $username)) {
-        array_push($error, "Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters, unique");
+        array_push($error, "Username must contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters");
     }
     if (count($error) == 0) {
         $fileName = $_FILES['profile-image']['name'];
@@ -60,6 +63,13 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         fclose($writeData);
         header("location: ../login/login.php");
     } else {
-        print_r($error);
+        foreach ($error as $lineError) {
+            print_r($lineError);
+            echo "<br>";
+        }
     }
 }
+?>
+<div>
+    <a href="register-shipper.php">Go back</a>
+</div>

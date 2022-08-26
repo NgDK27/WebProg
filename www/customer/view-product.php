@@ -1,3 +1,4 @@
+<title>View product</title>
 <?php
 session_start();
 include('../includes/header.php');
@@ -49,8 +50,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                     $vendor = $product[1];
                     $name = $product[2];
                     $location = "";
-                    $mydir = '../products-images'; 
-                    $myfiles = array_diff(scandir($mydir), array('.', '..')); 
+                    $mydir = '../products-images';
+                    $myfiles = array_diff(scandir($mydir), array('.', '..'));
                     foreach ($myfiles as $filename) {
                         if (str_contains($filename, substr($id, 0, 14))) {
                             $location .= $filename;
@@ -87,8 +88,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                     $name = $product[2];
                     $price = $product[3];
                     $location = "";
-                    $mydir = '../products-images'; 
-                    $myfiles = array_diff(scandir($mydir), array('.', '..')); 
+                    $mydir = '../products-images';
+                    $myfiles = array_diff(scandir($mydir), array('.', '..'));
                     foreach ($myfiles as $filename) {
                         if (str_contains($filename, substr($id, 0, 14))) {
                             $location .= $filename;
@@ -117,8 +118,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                 $name = $product[2];
                 $price = $product[3];
                 $location = "";
-                $mydir = '../products-images'; 
-                $myfiles = array_diff(scandir($mydir), array('.', '..')); 
+                $mydir = '../products-images';
+                $myfiles = array_diff(scandir($mydir), array('.', '..'));
                 foreach ($myfiles as $filename) {
                     if (str_contains($filename, substr($id, 0, 14))) {
                         $location .= $filename;
