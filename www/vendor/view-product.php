@@ -1,4 +1,3 @@
-<title>View product</title>
 <?php
 session_start();
 include('../includes/header.php');
@@ -6,6 +5,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
     header("Location: ../my-account/my-account.php?error=invalidaccount");
 }
 ?>
+<title>View product</title>
 <div id="product-container">
     <ul id="product-list">
         <?php

@@ -1,5 +1,3 @@
-<title>Add new product</title>
-
 <?php
 session_start();
 include('../includes/header.php');
@@ -7,6 +5,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
     header("Location: ../my-account/my-account.php?error=invalidaccount");
 }
 ?>
+<title>Add new product</title>
 <link rel="stylesheet" href="./add-new-product.css">
 
 <h1>Add a new product to your store</h1>

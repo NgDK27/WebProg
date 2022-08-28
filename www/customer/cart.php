@@ -1,4 +1,3 @@
-<title>Cart</title>
 <?php
 session_start();
 include('../includes/header.php');
@@ -6,6 +5,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
     header("Location: ../my-account/my-account.php?error=invalidaccount");
 }
 ?>
+<title>Cart</title>
 
 <body>
     <div class="cart-container">
@@ -24,7 +24,6 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             <a href="view-product.php">Continue shopping</a>
         </button>
     </div>
-
 </body>
 
 

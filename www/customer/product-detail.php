@@ -1,4 +1,3 @@
-<title>Product details</title>
 <?php
 session_start();
 include('../includes/header.php');
@@ -26,6 +25,7 @@ foreach ($myfiles as $filename) {
     }
 }
 ?>
+<title>Product details</title>
 <link rel="stylesheet" href="product-detail.css">
 
 <body>

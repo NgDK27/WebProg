@@ -1,6 +1,3 @@
-<title>Order details</title>
-<link rel="stylesheet" href="order-detail.css">
-
 <?php
 session_start();
 include('../includes/header.php');
@@ -27,6 +24,9 @@ while ($line = fgetcsv($readData)) {
 fclose($readData);
 
 ?>
+
+<title>Order details</title>
+<link rel="stylesheet" href="order-detail.css">
 
 <body>
     <h1>Order detail</h1>

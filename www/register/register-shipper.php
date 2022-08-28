@@ -1,7 +1,7 @@
-<title>Register</title>
 <?php
 include('../includes/header.php');
 ?>
+<title>Register</title>
 <link rel="stylesheet" href="register-shared.css">
 <div class="heading">
     <h1>Register as a Shipper</h1>

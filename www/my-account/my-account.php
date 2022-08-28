@@ -1,5 +1,3 @@
-<title>My Account</title>
-
 <?php
 session_start();
 include('../includes/header.php');
@@ -7,6 +5,8 @@ if (!isset($_SESSION['username'])) {
     header("Location: ../login/login.php?error=notLoggedIn");
 }
 ?>
+
+<title>My Account</title>
 <link rel="stylesheet" href="my-account.css">
 
 <h1>Personal Information</h1>
