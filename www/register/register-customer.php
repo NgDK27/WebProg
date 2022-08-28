@@ -4,7 +4,7 @@ include('../includes/header.php');
 ?>
 <link rel="stylesheet" href="register-shared.css">
 <div class="heading">
-    <h1>Register to become a customer</h1>
+    <h1>Register as a Customer</h1>
 </div>
 <div class="register-form-container">
     <form class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box" action="register-customer-include.php" enctype="multipart/form-data" method="post">

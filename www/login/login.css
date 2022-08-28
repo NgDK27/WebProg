@@ -17,11 +17,12 @@ h1 {
 }
 
 #submit {
-    width: 22rem;
+    width: 16rem;
     margin-top: 20px;
     padding: 12px;
     text-transform: uppercase;
     background-color: #f57224;
+    font-size: 16px;
 }
 
 #submit:hover {
