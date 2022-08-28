@@ -37,3 +37,28 @@ button {
     margin-left: 1rem;
     text-transform: uppercase;
 }
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .container .footer_about{
+    width:40%;
+}
+
+
+.fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 50px;
+  }
+  
+
