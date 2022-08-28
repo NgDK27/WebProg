@@ -1,5 +1,4 @@
 <title>My Account</title>
-<link rel="stylesheet" href="my-account.css">
 
 <?php
 session_start();
@@ -8,6 +7,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: ../login/login.php?error=notLoggedIn");
 }
 ?>
+<link rel="stylesheet" href="my-account.css">
 
 <h1>Personal Information</h1>
 <div id="info-container" class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box">

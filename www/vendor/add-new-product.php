@@ -1,5 +1,4 @@
 <title>Add new product</title>
-<link rel="stylesheet" href="add-new-product.css">
 
 <?php
 session_start();
