@@ -1,4 +1,6 @@
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <footer>
@@ -16,16 +18,15 @@
         </div>
     </div>
 
-    <!--Footer Links-->
-    <div class="footer_link">
-        <h2>Company</h2>
-        <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy </a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
+
+
+    <!--Copyright-->
+
+    <div class ="copyright">
+        <h4>© Lozodo 2022</h4>
     </div>
+    
+
 
 
 </footer>

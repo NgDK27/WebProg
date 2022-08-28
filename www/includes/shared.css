@@ -62,3 +62,10 @@ footer .container .footer_about{
   }
   
 
+.copyright h4{
+    color:grey;
+}
+.copyright{
+    position:relative;
+    
+}
