@@ -1,4 +1,6 @@
 <title>Add new product</title>
+<link rel="stylesheet" href="add-new-product.css">
+
 <?php
 session_start();
 include('../includes/header.php');
@@ -7,26 +9,27 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
 }
 ?>
 <link rel="stylesheet" href="./add-new-product.css">
+
+<h1>Add a new product to your store</h1>
 <div id="add-new-product-container">
-    <form action="add-new-product-include.php" enctype="multipart/form-data" method="post">
-        <h1>Add a new product to your store</h1>
-        <div>
-            <label for="product-name">Product Name</label>
-            <input type="text" id="product-name" name="product-name" minlength="10" maxlength="20">
+    <form class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box" action="add-new-product-include.php" enctype="multipart/form-data" method="post">
+        <div class="form-floating mb-3">
+            <label for="product-name" class="add-new-product-label">Product Name</label>
+            <input type="text" class="form-control" id="product-name" name="product-name" minlength="10" maxlength="20">
         </div>
-        <div>
-            <label for="price">Price</label>
-            <input type="number" id="price" name="price">
+        <div class="form-floating mb-3">
+            <label for="price" class="add-new-product-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price">
         </div>
-        <div class="form-floating">
-            <textarea placeholder="Description" id="description" name="description" maxlength="500"></textarea>
-            <label for="description">Description</label>
+        <div class="form-floating mb-3">
+            <label for="description" class="add-new-product-label">Description</label>
+            <textarea placeholder="Description" class="form-control" id="description" name="description" maxlength="500"></textarea>
         </div>
-        <div>
-            <label for="product-image">Product Images</label>
-            <input type="file" id="product-image" name="product-image">
+        <div class="form-floating mb-3">
+            <label for="product-image" class="add-new-product-label">Product Images</label>
+            <input type="file" class="form-control" id="product-image" name="product-image">
         </div>
-        <button type="submit" name="submit">Submit</button>
+        <button type="submit" class="btn btn-primary btn-lg" name="submit" id="submit">Submit</button>
     </form>
 </div>
 <?php

@@ -1,4 +1,6 @@
 <title>View order</title>
+<link rel="stylesheet" href="view-order.css">
+
 <?php
 session_start();
 include('../includes/header.php');
@@ -6,6 +8,10 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '3') {
     header("Location: ../my-account/my-account.php?error=invalidaccount");
 }
 ?>
+
+<h1>Active orders</h1>
+
+<div id="info-container" class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box">
 
 <?php
 $readData = fopen('../Data/order.db', 'r');
@@ -30,8 +36,9 @@ foreach ($orderData as $order) {
         }
     }
 }
-
 ?>
+</div>
+
 <?php
 include('../includes/footer.php');
 ?>

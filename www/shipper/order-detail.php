@@ -1,4 +1,6 @@
 <title>Order details</title>
+<link rel="stylesheet" href="order-detail.css">
+
 <?php
 session_start();
 include('../includes/header.php');
@@ -27,44 +29,58 @@ fclose($readData);
 ?>
 
 <body>
-    <?php foreach ($orderData as $order) : ?>
-        <?php if ($order[0] == $orderId) : ?>
+    <h1>Order detail</h1>
 
-            <section class="order">
-                <h3 id="id"><?php echo $order[0] ?></h3>
-                <h3 name="user" id="user"><?php echo "User: " . $order[1] ?></h3>
-                <h3 id="hub"><?php echo "Hub: " . $order[2] ?></h3>
-                <h3 name='status' id="status"><?php echo "Status: " . $order[3] ?></h3>
+    <div id="info-container" class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box">
+        <?php foreach ($orderData as $order) : ?>
+            <?php if ($order[0] == $orderId) : ?>
 
-                <?php foreach ($order as $orderInfo) : ?>
-                    <?php if (str_contains($orderInfo, ':')) : ?>
-                        <?php foreach ($productData as $product) : ?>
-                            <?php if (str_contains($product[0], substr($orderInfo, 0, 14))) : ?>
-                                <h3 id="product"><?php echo $product[2] . substr($orderInfo, 23, 10); ?></h3>
-                            <?php endif ?>
-                        <?php endforeach; ?>
-                    <?php endif ?>
-                <?php endforeach; ?>
+                <section class="order">
+                    <h2 id="id">Order ID</h2>
+                    <p><?php echo $order[0] ?></p>
 
-                <?php if ($order[3] == "active") : ?>
-                    <a href="./order-detail-include.php?status=delievered&id=<?php echo $orderId ?>">Change to delivered</a>
-                    <a href="./order-detail-include.php?status=canceled&id=<?php echo $orderId ?>">Change to canceled</a>
-                <?php endif ?>
+                    <h2 name="user" id="user">User</h2>
+                    <p><?php echo $order[1] ?></p>
 
-                <?php if ($order[3] == "delievered") : ?>
-                    <a href="./order-detail-include.php?status=active&id=<?php echo $orderId ?>">Change to active</a>
-                    <a href="./order-detail-include.php?status=canceled&id=<?php echo $orderId ?>">Change to canceled</a>
-                <?php endif ?>
+                    <h2 id="hub">Distribution Hub</h2>
+                    <p><?php echo $order[2] ?></p>
 
-                <?php if ($order[3] == "canceled") : ?>
-                    <a href="./order-detail-include.php?status=active&id=<?php echo $orderId ?>">Change to active</a>
-                    <a href="./order-detail-include.php?status=delivered&id=<?php echo $orderId ?>">Change to delivered</a>
-                <?php endif ?>
-            </section>
+                    <h2 name='status'>Order Status</h2>
+                    <p id="status"><?php echo $order[3] ?></p>
 
-        <?php break;
-        endif ?>
-    <?php endforeach; ?>
+                    <?php foreach ($order as $orderInfo) : ?>
+                        <?php if (str_contains($orderInfo, ':')) : ?>
+                            <?php foreach ($productData as $product) : ?>
+                                <?php if (str_contains($product[0], substr($orderInfo, 0, 14))) : ?>
+                                    <h2 id="product"><?php echo $product[2] . substr($orderInfo, 23, 10); ?></h2>
+                                <?php endif ?>
+                            <?php endforeach; ?>
+                        <?php endif ?>
+                    <?php endforeach; ?>
+
+                    <div class="change-status">
+                        <?php if ($order[3] == "active") : ?>
+                            <p><a href="./order-detail-include.php?status=delivered&id=<?php echo $orderId ?>">Change order status to delivered</a></p>
+                            <p><a href="./order-detail-include.php?status=canceled&id=<?php echo $orderId ?>">Change order status to canceled</a></p>
+                        <?php endif ?>
+
+                        <?php if ($order[3] == "delivered") : ?>
+                            <p><a href="./order-detail-include.php?status=active&id=<?php echo $orderId ?>">Change order status to active</a></p>
+                            <p><a href="./order-detail-include.php?status=canceled&id=<?php echo $orderId ?>">Change order status to canceled</a></p>
+                        <?php endif ?>
+
+                        <?php if ($order[3] == "canceled") : ?>
+                            <p><a href="./order-detail-include.php?status=active&id=<?php echo $orderId ?>">Change order status to active</a></p>
+                            <p><a href="./order-detail-include.php?status=delivered&id=<?php echo $orderId ?>">Change order status to delivered</a></p>
+                        <?php endif ?>
+                    </div>
+                </section>
+
+            <?php break;
+            endif ?>
+        <?php endforeach; ?>
+    </div>
+
     <?php
     include('../includes/footer.php');
     ?>

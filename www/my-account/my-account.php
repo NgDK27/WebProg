@@ -1,41 +1,58 @@
-<title>My account</title>
+<title>My Account</title>
+<link rel="stylesheet" href="my-account.css">
+
 <?php
 session_start();
 include('../includes/header.php');
 if (!isset($_SESSION['username'])) {
     header("Location: ../login/login.php?error=notLoggedIn");
 }
-
-echo '<h3>' . $_SESSION['username'] . '</h3>';
-if ($_SESSION['user-type'] == 1) {
-    echo '<h3>Customer</h3>';
-    echo '<h3>' . $_SESSION['name'] . '</h3>';
-    echo '<h3>' . $_SESSION['address'] . '</h3>';
-} elseif (($_SESSION['user-type'] == 2)) {
-    echo '<h3>Vendor</h3>';
-    echo '<h3>' . $_SESSION['name'] . '</h3>';
-    echo '<h3>' . $_SESSION['address'] . '</h3>';
-} else {
-    echo '<h3>Shipper</h3>';
-    echo '<h3>' . $_SESSION['hub'] . '</h3>';
-}
-
 ?>
-<img src="../profile-images/<?php
-                            echo $_SESSION['profile-image']; ?>" alt="">
-<br>
-<div class="form-container">
-    <form action="my-account-include.php" enctype="multipart/form-data" method="post">
-        <div class="mb-3 form-field">
-            <label for="profile-image">Change profile images</label>
-            <input type="file" id="profile-image" name="profile-image">
-        </div>
-        <button type="submit" name="submit">Submit</button>
-    </form>
+
+<h1>Personal Information</h1>
+<div id="info-container" class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box">
+    <?php
+    $username = "Username";
+    $address = "Address";
+    $name = "Name";
+    $hub = "Distribution hub";
+    echo '<h2>' . $username . '</h2>', '<p>' . $_SESSION['username'] .'</p>';
+    if ($_SESSION['user-type'] == 1) {
+        echo '<h2>Account type</h2>';
+        echo '<p>Customer</p>';
+        echo '<h2>' . $name . '</h2>', '<p>' . $_SESSION['name'] .'</p>';
+        echo '<h2>' . $address . '</h2>', '<p>' . $_SESSION['address'] .'</p>';
+    } elseif (($_SESSION['user-type'] == 2)) {
+        echo '<h2>Account type</h2>';
+        echo '<p>Vendor</p>';
+        echo '<h2>' . $name . '</h2>', '<p>' . $_SESSION['name'] .'</p>';
+        echo '<h2>' . $address . '</h2>', '<p>' . $_SESSION['address'] .'</p>';
+    } else {
+        echo '<h2>Account type</h2>';
+        echo '<p>Shipper</p>';
+        echo '<h2>' . $hub . '</h2>', '<p>' . $_SESSION['hub'] .'</p>';
+    }
+
+    ?>
+    <h2>Profile image</h2>
+    <img src="../profile-images/<?php
+                                echo $_SESSION['profile-image']; ?>" alt="Profile picture">
+    <br>
+    <div class="form-container">
+        <form action="my-account-include.php" enctype="multipart/form-data" method="post">
+            <div class="form-floating mb-3">
+                <label for="profile-image" class="info-label">Change profile images</label>
+                <input type="file" class="form-control" id="profile-image" name="profile-image">
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary btn-lg" name="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <a href="../login/login.php?logout=true">
+        Logout
+    </a>
 </div>
-<a href="../login/login.php?logout=true">
-    Logout
-</a>
 
 <?php
 include('../includes/footer.php');
