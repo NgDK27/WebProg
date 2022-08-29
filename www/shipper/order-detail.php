@@ -23,6 +23,14 @@ while ($line = fgetcsv($readData)) {
 }
 fclose($readData);
 
+$readData = fopen('../Data/distributionhub.db', 'r');
+flock($readData, LOCK_SH);
+$hubData = array();
+while ($line = fgetcsv($readData)) {
+    $hubData[] = $line;
+}
+fclose($readData);
+
 ?>
 
 <title>Order details</title>
@@ -43,7 +51,14 @@ fclose($readData);
                     <p><?php echo $order[1] ?></p>
 
                     <h2 id="hub">Distribution Hub</h2>
-                    <p><?php echo $order[2] ?></p>
+                    <p><?php
+                        foreach ($hubData as $hub) {
+                            if ($hub[0] == $order[2]) {
+                                echo $hub[1];
+                                break;
+                            }
+                        }
+                        ?></p>
 
                     <h2 name='status'>Order Status</h2>
                     <p id="status"><?php echo $order[3] ?></p>

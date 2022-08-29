@@ -4,6 +4,14 @@ include('../includes/header.php');
 if (!isset($_SESSION['username'])) {
     header("Location: ../login/login.php?error=notLoggedIn");
 }
+
+$readData = fopen('../Data/distributionhub.db', 'r');
+flock($readData, LOCK_SH);
+$hubData = array();
+while ($line = fgetcsv($readData)) {
+    $hubData[] = $line;
+}
+fclose($readData);
 ?>
 
 <title>My Account</title>
@@ -30,7 +38,12 @@ if (!isset($_SESSION['username'])) {
     } else {
         echo '<h2>Account type</h2>';
         echo '<p>Shipper</p>';
-        echo '<h2>' . $hub . '</h2>', '<p>' . $_SESSION['hub'] .'</p>';
+        foreach ($hubData as $eachHub) {
+            if ($eachHub[0] == $_SESSION['hub']) {
+                echo '<h2>' . $hub . '</h2>', '<p>' . $eachHub[1] .'</p>';
+                break;
+            }
+        }
     }
 
     ?>

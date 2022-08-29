@@ -9,6 +9,7 @@ addToCartButton.addEventListener("click", () => {
   if (localStorage.getItem(productId)) {
     var object = JSON.parse(localStorage.getItem(productId));
     object["quantity"] += Number(quantity);
+    object["price"] = object["price"] * object["quantity"];
     localStorage.setItem(productId, JSON.stringify(object));
     alert("Your item has been added to cart");
   } else {
