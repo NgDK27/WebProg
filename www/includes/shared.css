@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,7 +28,7 @@ img {
     max-height: 100%;
     object-fit: cover;
 }
-  
+
 
 button {
     display: inline-block;
@@ -36,4 +38,9 @@ button {
     margin-right: 1rem;
     margin-left: 1rem;
     text-transform: uppercase;
+}
+
+.navbar {
+    height: 6rem;
+    text-align: center;
 }
