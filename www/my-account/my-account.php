@@ -18,7 +18,7 @@ fclose($readData);
 <link rel="stylesheet" href="my-account.css">
 
 <h1>Personal Information</h1>
-<div id="info-container" class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box">
+<div id="info-container" class="container-sm d-flex p-3 align-items-center align-self-center flex-column rounded shadow p outside-box">
     <?php
     $username = "Username";
     $address = "Address";
@@ -49,12 +49,11 @@ fclose($readData);
     ?>
     <h2>Profile image</h2>
     <img src="../profile-images/<?php
-                                echo $_SESSION['profile-image']; ?>" alt="Profile picture">
-    <br>
+                                echo $_SESSION['profile-image']; ?>" id="profile-picture" alt="Profile picture">
     <div class="form-container">
         <form action="my-account-include.php" enctype="multipart/form-data" method="post">
             <div class="form-floating mb-3">
-                <label for="profile-image" class="info-label">Change profile images</label>
+                <label for="profile-image" class="info-label">Click here to change profile images</label>
                 <input type="file" class="form-control" id="profile-image" name="profile-image">
             </div>
             <div class="row justify-content-center">
