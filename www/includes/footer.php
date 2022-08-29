@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 <footer>
     <!--Footer About-->
@@ -10,10 +10,10 @@
             <h2> About LOZODO </h2>
             <p>Second biggest ecommerce website in Vietnam. Providing you goods in just a click!</p>
 
-            <a href="#" class="fa fa-facebook fa-lg"></a>
-            <a href="#" class="fa fa-twitter fa-lg"></a>
-            <a href="#" class="fa fa-google fa-lg"></a>
-            <a href="#" class="fa fa-instagram fa-lg"></a>
+            <a href="#" class="bi bi-facebook fa-lg"></a>
+            <a href="#" class="bi bi-twitter fa-lg"></a>
+            <a href="#" class="bi bi-google fa-lg"></a>
+            <a href="#" class="bi bi-instagram fa-lg"></a>
             
         </div>
     </div>
