@@ -6,6 +6,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
 }
 ?>
 <title>View product</title>
+<link rel="stylesheet" href="view-product.css">
+
 <div id="form-container">
     <form action="view-product.php" method="GET" id="price-search">
         <div>

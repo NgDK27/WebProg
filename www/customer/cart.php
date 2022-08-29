@@ -6,9 +6,11 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
 }
 ?>
 <title>Cart</title>
+<link rel="stylesheet" href="cart.css">
 
 <body>
-    <div class="cart-container">
+    <h1>Your Cart</h1>
+    <div id="cart-container" class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box">
         <ul id="item-list">
 
         </ul>
