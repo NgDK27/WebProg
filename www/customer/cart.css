@@ -16,3 +16,7 @@ h1 {
     background-color: white;
 }
 
+.product li {
+    border-bottom: 0.5px, solid, lightgray;
+}
+

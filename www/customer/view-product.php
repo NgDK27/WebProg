@@ -9,29 +9,29 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
 <link rel="stylesheet" href="view-product.css">
 <div class="container">
     <div id="form-container">
-        <form action="view-product.php" method="GET" id="price-search">
-            <div>
-                <label for="min-price" class="form-label">Min Price</label>
-                <input type="number" class="form-control" id="min-price" name="min-price">
-            </div>
-            <div>
-                <label for="max-price" class="form-label">Max Price</label>
-                <input type="number" class="form-control" id="max-price" name="max-price">
-            </div>
-            <div>
-                <button type="submit" class="btn" name="submit">Search</button>
-            </div>
-        </form>
         <form action="view-product.php" method="GET" id="name-search">
             <div>
-                <label for="input-name" class="form-label">Search by enter the name</label>
+                <label for="input-name" class="form-label">Search by enter product name</label>
                 <input type="text" class="form-control" id="input-name" name="input-name">
             </div>
             <div>
-                <button type="submit" class="btn" name="submit">Search</button>
+                <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Search</button>
+            </div>
+        </form>
+        <form action="view-product.php" method="GET" id="price-search">
+            <div>
+                <p>or Price Range</p>
+                <input type="number" class="form-control" id="min-price" name="min-price" placeholder="Min">
+                <div>-</div>
+                <input type="number" class="form-control" id="max-price" name="max-price" placeholder="Max">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Search</button>
             </div>
         </form>
     </div>
+
+    <h1 class="text-center">PRODUCTS</h1>
     <div id="product-container">
         <ul id="product-list">
             <?php
@@ -61,16 +61,16 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                             }
                         }
                         $count += 1;
-                        echo "<li class=\"item-container\">";
+                        echo "<li class=\"container-sm d-flex align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
                         echo "<a href= \"product-detail.php?id=$id\">";
+                        echo "<div>";
+                        echo '<img src="../products-images/' . $location . '" alt="">';
+                        echo "</div>";
                         echo "<div>";
                         print_r($name);
                         echo "</div>";
                         echo "<div>";
                         print_r($price);
-                        echo "</div>";
-                        echo "<div>";
-                        echo '<img src="../products-images/' . $location . '" alt="">';
                         echo "</div>";
                         echo "</a>";
                         echo "</li>";
@@ -98,16 +98,16 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                                 break;
                             }
                         }
-                        echo "<li class=\"item-container\">";
+                        echo "<li class=\"container-sm d-flex align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
                         echo "<a href= \"product-detail.php?id=$id\">";
+                        echo "<div>";
+                        echo '<img src="../products-images/' . $location . '" alt="">';
+                        echo "</div>";
                         echo "<div>";
                         print_r($name);
                         echo "</div>";
                         echo "<div>";
                         print_r($price);
-                        echo "</div>";
-                        echo "<div>";
-                        echo '<img src="../products-images/' . $location . '" alt="">';
                         echo "</div>";
                         echo "</a>";
                         echo "</li>";
@@ -128,18 +128,20 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                             break;
                         }
                     }
-                    echo "<li class=\"item-container\">";
-                    echo "<a href= \"product-detail.php?id=$id\">";
-                    echo "<div>";
-                    print_r($name);
-                    echo "</div>";
-                    echo "<div>";
-                    print_r($price);
-                    echo "</div>";
+                    echo "<li class=\"container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
+                    echo "<a href= \"product-detail.php?id=$id\" class=\"text-decoration-none\">";
                     echo "<div>";
                     echo '<img src="../products-images/' . $location . '" alt="">';
                     echo "</div>";
+                    echo "<h2>";
+                    print_r($name);
+                    echo "</h2>";
                     echo "</a>";
+                    echo "<div>";
+                    echo "<p>₫";
+                    print_r($price);
+                    echo "</p>";
+                    echo "</div>";
                     echo "</li>";
                 }
             }
