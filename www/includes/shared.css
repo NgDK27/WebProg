@@ -14,14 +14,19 @@ body {
     font-size: 1.6rem;
 }
 
-nav {
-    /* height: 6rem; */
+header {
+    width: 100%;
+    background-color: white;
+}
+
+.navbar {
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .navbar-brand {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: 10%;
     font-size: 2.5rem;
 }
 
@@ -53,8 +58,4 @@ button {
 
 .nav-link:hover {
     color: #f57224 !important;
-}
-
-#navbarNav {
-    margin-right: 10%;
 }
