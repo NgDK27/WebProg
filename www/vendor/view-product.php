@@ -6,6 +6,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
 }
 ?>
 <title>View product</title>
+<link rel="stylesheet" href="view-product.css">
+
 <div id="product-container">
     <ul id="product-list">
         <?php
@@ -32,18 +34,19 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
                 }
             }
             if ($product[1] == $_SESSION['username']) {
-                echo "<li>";
-                echo "<div>";
-                print_r($productName);
-                echo "</div>";
-                echo "<div>";
-                print_r($price);
-                echo "</div>";
-                echo "<div>";
-                print_r($descript);
-                echo "</div>";
+                echo "<li class=\"container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
+                echo "<a href= \"product-detail.php?id=$id\" class=\"text-decoration-none\">";
                 echo "<div>";
                 echo '<img src="../products-images/' . $location . '" alt="">';
+                echo "</div>";
+                echo "<h2>";
+                print_r($name);
+                echo "</h2>";
+                echo "</a>";
+                echo "<div>";
+                echo "<p>₫";
+                print_r($price);
+                echo "</p>";
                 echo "</div>";
                 echo "</li>";
             }

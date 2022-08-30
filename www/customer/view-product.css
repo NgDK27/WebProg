@@ -10,7 +10,6 @@ body {
 
 input {
     font-size: 14px !important;
-    display: flex !important;
 }
 
 #input-name {
