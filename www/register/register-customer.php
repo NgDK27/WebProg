@@ -3,11 +3,11 @@ include('../includes/header.php');
 ?>
 <title>Register</title>
 <link rel="stylesheet" href="register-shared.css">
-<div class="heading">
-    <h1>Register as a Customer</h1>
+<div class="w-auto align-items-center align-self-center">
+    <h1 class="text-center">Register as a Customer</h1>
 </div>
-<div class="register-form-container">
-    <form class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box" action="register-customer-include.php" enctype="multipart/form-data" method="post">
+<div class="container w-auto bg-white d-flex align-items-center align-self-center flex-column rounded shadow p outside-box">
+    <form action="register-customer-include.php" enctype="multipart/form-data" method="post">
         <div class="form-floating mb-4">
             <label for="username" class="register-label">Username*</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Please enter your username">
@@ -62,11 +62,13 @@ include('../includes/header.php');
             <label for="profile-image" class="register-label">Profile Image</label>
             <input type="file" class="form-control" id="profile-image" name="profile-image">
         </div>
-        <button type="submit" name="submit" id="submit" class="btn btn-primary btn-lg">Sign Up</button>
-        <div>
+        <div class="row justify-content-center">
+            <button type="submit" name="submit" id="submit" class="btn btn-primary btn-lg">Sign Up</button>
+        </div>
+        <div class="row justify-content-center">
             <p id="login">
                 Already have an account?
-            <a href="../login/login.php">Log in</a>
+                <a href="../login/login.php">Log in</a>
             </p>
         </div>
         <div class="register-others">

@@ -61,18 +61,20 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                             }
                         }
                         $count += 1;
-                        echo "<li class=\"container-sm d-flex align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
-                        echo "<a href= \"product-detail.php?id=$id\">";
+                        echo "<li class=\"container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
+                        echo "<a href= \"product-detail.php?id=$id\" class=\"text-decoration-none\">";
                         echo "<div>";
                         echo '<img src="../products-images/' . $location . '" alt="">';
                         echo "</div>";
-                        echo "<div>";
+                        echo "<h2>";
                         print_r($name);
-                        echo "</div>";
-                        echo "<div>";
-                        print_r($price);
-                        echo "</div>";
+                        echo "</h2>";
                         echo "</a>";
+                        echo "<div>";
+                        echo "<p>₫";
+                        print_r($price);
+                        echo "</p>";
+                        echo "</div>";
                         echo "</li>";
                     }
                 }
@@ -98,18 +100,20 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                                 break;
                             }
                         }
-                        echo "<li class=\"container-sm d-flex align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
-                        echo "<a href= \"product-detail.php?id=$id\">";
+                        echo "<li class=\"container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
+                        echo "<a href= \"product-detail.php?id=$id\" class=\"text-decoration-none\">";
                         echo "<div>";
                         echo '<img src="../products-images/' . $location . '" alt="">';
                         echo "</div>";
-                        echo "<div>";
+                        echo "<h2>";
                         print_r($name);
-                        echo "</div>";
-                        echo "<div>";
-                        print_r($price);
-                        echo "</div>";
+                        echo "</h2>";
                         echo "</a>";
+                        echo "<div>";
+                        echo "<p>₫";
+                        print_r($price);
+                        echo "</p>";
+                        echo "</div>";
                         echo "</li>";
                     }
                 }
