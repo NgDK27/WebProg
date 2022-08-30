@@ -4,10 +4,10 @@ include('../includes/header.php');
 <title>Register</title>
 <link rel="stylesheet" href="register-shared.css">
 <div class="heading">
-    <h1>Register as a Shipper</h1>
+    <h1 class="text-center">Register as a Shipper</h1>
 </div>
 <div class="register-form-container">
-    <form class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box" action="register-shipper-include.php" enctype="multipart/form-data" method="post">
+    <form class="container w-auto bg-white d-flex align-items-center align-self-center flex-column rounded shadow p outside-box" action="register-shipper-include.php" enctype="multipart/form-data" method="post">
         <div class="form-floating mb-4">
             <label for="username" class="register-label">Username*</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Please enter your username">

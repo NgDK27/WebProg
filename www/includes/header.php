@@ -20,7 +20,7 @@
                 <ul class="navbar-nav">
                     <?php if (!isset($_SESSION['user-type'])) : ?>
                         <li class="nav-item">
-                            <a href="/login/login.php">Login</a>
+                            <a class="nav-link" href="/login/login.php">Login</a>
                         </li>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "1") : ?>
