@@ -12,10 +12,6 @@ input {
     font-size: 14px !important;
 }
 
-#input-name {
-    width: 50%;
-}
-
 #submit {
     width: 6rem;
     margin-top: 10px;

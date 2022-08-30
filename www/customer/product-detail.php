@@ -28,7 +28,7 @@ foreach ($myfiles as $filename) {
 <title>Product details</title>
 <link rel="stylesheet" href="product-detail.css">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
 <script src="product-detail.js"></script>
 
 <body>
@@ -45,25 +45,23 @@ foreach ($myfiles as $filename) {
                     </div>
                     <div class="col-sm">
                         <h1 name="itemName" id="itemName"><?php echo $product[2] ?></h1>
-
-                        <span name='itemPrice' id="itemPrice"><?php echo "<h2>₫";
-                                                                echo $product[3];
-                                                                echo "</h2>" ?></span>
+                        <hr>
+                        <h2>Product details</h2>
+                        <p><?php echo $product[4] ?></p>
+                        <hr>
+                        <h2>Vendor: <?php echo $product[1] ?></h2>
+                        <h2 id="price-heading">
+                            ₫
+                            <span name='itemPrice' id="itemPrice">
+                                <?php
+                                echo $product[3]; ?>
+                            </span>
+                        </h2>
                         <label for="qty" class="quantity"><strong>Quantity:</strong>
                             <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus" data-field="">
-                                        <span class="glyphicon glyphicon-minus"></span>
-                                    </button>
-                                </span>
                                 <input type="number" id="qty" name="itemQuantity" class="form-control input-number" value=1 min=1 max=100>
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                    </button>
-                                </span>
                             </div>
-                            <button class="cart-btn" id="addToCart" href="#" type="submit" role="submit">Add to cart</button>
+                            <button class="btn btn-primary btn-lg" id="addToCart" href="#" type="submit" role="submit">Add to Cart</button>
                         </label>
                     </div>
                     <h3 id="id"><?php echo $id ?></h3>

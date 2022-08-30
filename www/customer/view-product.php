@@ -8,27 +8,31 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
 <title>View product</title>
 <link rel="stylesheet" href="view-product.css">
 <div class="container">
-    <div id="form-container">
-        <form action="view-product.php" method="GET" id="name-search">
-            <div>
-                <label for="input-name" class="form-label">Search by enter product name</label>
-                <input type="text" class="form-control" id="input-name" name="input-name">
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Search</button>
-            </div>
-        </form>
-        <form action="view-product.php" method="GET" id="price-search">
-            <div>
-                <p>or Price Range</p>
-                <input type="number" class="form-control" id="min-price" name="min-price" placeholder="Min">
-                <div>-</div>
-                <input type="number" class="form-control" id="max-price" name="max-price" placeholder="Max">
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Search</button>
-            </div>
-        </form>
+    <div id="form-container" class="row mb-5">
+        <div class="col-sm-9">
+            <form action="view-product.php" method="GET" id="name-search">
+                <div>
+                    <label for="input-name" class="form-label">Search by enter product name</label>
+                    <input type="text" class="form-control w-75" id="input-name" name="input-name">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="">
+            <form action="view-product.php" method="GET" id="price-search" class="col-sm">
+                <div>
+                    <p>or Price Range</p>
+                    <input type="number" class="form-control" id="min-price" name="min-price" placeholder="Min">
+                    <div>-</div>
+                    <input type="number" class="form-control" id="max-price" name="max-price" placeholder="Max">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Search</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <h1 class="text-center">PRODUCTS</h1>
