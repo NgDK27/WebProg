@@ -15,11 +15,14 @@ body {
 }
 
 nav {
-    height: 6rem;
+    /* height: 6rem; */
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 10%;
+    font-size: 2.5rem;
 }
 
 a {
@@ -46,4 +49,12 @@ button {
     margin-right: 1rem;
     margin-left: 1rem;
     text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: #f57224 !important;
+}
+
+#navbarNav {
+    margin-right: 10%;
 }
