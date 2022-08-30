@@ -36,6 +36,7 @@ foreach ($myfiles as $filename) {
                 <?php $id = $product[0] ?>
                 <h3 id="id"><?php echo $id ?></h3>
                 <h3 name="itemName" id="itemName"><?php echo $product[2] ?></h3>
+                <h3>Vendor: <?php echo $product[1] ?></h3>
                 <div class="pic">
                     <img name="itemPicPath" id="itemPic" src="../products-images/<?php echo $location; ?>" alt="">
                 </div>
