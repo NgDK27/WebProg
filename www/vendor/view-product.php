@@ -6,6 +6,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
 }
 ?>
 <title>View product</title>
+<link rel="stylesheet" href="view-product.css">
 <div id="product-container">
     <ul id="product-list">
         <?php
@@ -32,7 +33,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
                 }
             }
             if ($product[1] == $_SESSION['username']) {
-                echo "<li>";
+                echo "<li class=\"container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
                 echo "<div>";
                 print_r($productName);
                 echo "</div>";

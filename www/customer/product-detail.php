@@ -32,7 +32,7 @@ foreach ($myfiles as $filename) {
     <?php foreach ($productData as $product) : ?>
         <?php if ($product[0] == $productId) : ?>
 
-            <section class="product">
+            <section class="product container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white">
                 <?php $id = $product[0] ?>
                 <h3 id="id"><?php echo $id ?></h3>
                 <h3 name="itemName" id="itemName"><?php echo $product[2] ?></h3>
