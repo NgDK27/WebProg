@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +12,23 @@ html {
 
 body {
     font-size: 1.6rem;
+}
+
+header {
+    width: 100%;
+    background-color: #d6d6d6;
+}
+
+.navbar {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.navbar-brand {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
 a {
@@ -26,7 +45,7 @@ img {
     max-height: 100%;
     object-fit: cover;
 }
-  
+
 
 button {
     display: inline-block;
@@ -36,4 +55,8 @@ button {
     margin-right: 1rem;
     margin-left: 1rem;
     text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: #f57224 !important;
 }
