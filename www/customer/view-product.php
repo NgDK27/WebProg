@@ -5,7 +5,6 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
     header("Location: ../my-account/my-account.php?error=invalidaccount");
 }
 ?>
-<title>View product</title>
 <link rel="stylesheet" href="view-product.css">
 <div class="container">
     <div id="form-container" class="row mb-5">
@@ -17,7 +16,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                         <input type="text" class="form-control" id="input-name" name="input-name" placeholder="Name">
                     </div>
                     <div class="button-container">
-                        <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Search</button>
+                        <button type="submit" class="btn btn-primary btn-lg" name="submit">Search</button>
                     </div>
                 </div>
             </form>
@@ -34,7 +33,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                         <input type="number" class="form-control" id="max-price" name="max-price" placeholder="Max">
                     </div>
                     <div class="button-container">
-                        <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Search</button>
+                        <button type="submit" class="btn btn-primary btn-lg" name="submit">Search</button>
                     </div>
                 </div>
             </form>

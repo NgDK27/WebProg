@@ -16,12 +16,13 @@ body {
 
 header {
     width: 100%;
-    background-color: white;
+    background-color: #d6d6d6;
 }
 
 .navbar {
     max-width: 80%;
     margin: 0 auto;
+    background-color: transparent;
 }
 
 .navbar-brand {

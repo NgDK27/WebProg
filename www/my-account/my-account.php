@@ -14,7 +14,6 @@ while ($line = fgetcsv($readData)) {
 fclose($readData);
 ?>
 
-<title>My Account</title>
 <link rel="stylesheet" href="my-account.css">
 
 <h1>Personal Information</h1>
@@ -24,23 +23,23 @@ fclose($readData);
     $address = "Address";
     $name = "Name";
     $hub = "Distribution hub";
-    echo '<h2>' . $username . '</h2>', '<p>' . $_SESSION['username'] .'</p>';
+    echo '<h2>' . $username . '</h2>', '<p>' . $_SESSION['username'] . '</p>';
     if ($_SESSION['user-type'] == 1) {
         echo '<h2>Account type</h2>';
         echo '<p>Customer</p>';
-        echo '<h2>' . $name . '</h2>', '<p>' . $_SESSION['name'] .'</p>';
-        echo '<h2>' . $address . '</h2>', '<p>' . $_SESSION['address'] .'</p>';
+        echo '<h2>' . $name . '</h2>', '<p>' . $_SESSION['name'] . '</p>';
+        echo '<h2>' . $address . '</h2>', '<p>' . $_SESSION['address'] . '</p>';
     } elseif (($_SESSION['user-type'] == 2)) {
         echo '<h2>Account type</h2>';
         echo '<p>Vendor</p>';
-        echo '<h2>' . $name . '</h2>', '<p>' . $_SESSION['name'] .'</p>';
-        echo '<h2>' . $address . '</h2>', '<p>' . $_SESSION['address'] .'</p>';
+        echo '<h2>' . $name . '</h2>', '<p>' . $_SESSION['name'] . '</p>';
+        echo '<h2>' . $address . '</h2>', '<p>' . $_SESSION['address'] . '</p>';
     } else {
         echo '<h2>Account type</h2>';
         echo '<p>Shipper</p>';
         foreach ($hubData as $eachHub) {
             if ($eachHub[0] == $_SESSION['hub']) {
-                echo '<h2>' . $hub . '</h2>', '<p>' . $eachHub[1] .'</p>';
+                echo '<h2>' . $hub . '</h2>', '<p>' . $eachHub[1] . '</p>';
                 break;
             }
         }
