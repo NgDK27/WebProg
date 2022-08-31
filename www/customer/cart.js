@@ -11,7 +11,7 @@ for (let i = 0; i < localStorage.length; i++) {
   const li = document.createElement("li");
 
   for (const field in currentObject) {
-    detail = document.createElement("h3");
+    detail = document.createElement("h2");
     const data = currentObject[field];
     detail.append(data);
     li.append(detail);
