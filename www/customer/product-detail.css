@@ -10,6 +10,10 @@ body {
     margin-top: 6rem;
 }
 
+input {
+    font-size: 15px !important;
+}
+
 h1 {
     font-size: 30px !important;
 }
