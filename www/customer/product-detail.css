@@ -6,6 +6,10 @@ body {
     display: none;
 }
 
+.container {
+    margin-top: 6rem;
+}
+
 h1 {
     font-size: 30px !important;
 }
@@ -18,7 +22,6 @@ h2 {
     width: 14rem;
     margin-top: 20px;
     padding: 12px;
-    /* text-transform: uppercase; */
     background-color: #f57224;
     border-color: #dd6720;
     font-size: 16px;
