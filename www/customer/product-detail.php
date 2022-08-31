@@ -26,15 +26,12 @@ foreach ($myfiles as $filename) {
 }
 ?>
 <link rel="stylesheet" href="product-detail.css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-<script src="product-detail.js"></script>
 
 <body>
     <?php foreach ($productData as $product) : ?>
         <?php if ($product[0] == $productId) : ?>
 
-            <section class="container d-flex bg-white w-75 align-self-center flex-column rounded shadow outside-box">
+            <section class="container d-flex p-5 bg-white w-75 align-self-center flex-column rounded shadow outside-box">
                 <?php $id = $product[0] ?>
                 <div class="row">
                     <div class="col-sm-7">

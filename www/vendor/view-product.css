@@ -7,7 +7,6 @@
 img {
     height: 30rem;
     width: auto;
-    max-width: 500px;
 }
 
 @media only screen and (max-width: 1023px) {
