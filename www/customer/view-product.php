@@ -71,7 +71,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                             }
                         }
                         $count += 1;
-                        echo "<li class=\"container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
+                        echo "<li class=\"product container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow outside-box m-4 bg-white\">";
                         echo "<a href= \"product-detail.php?id=$id\" class=\"text-decoration-none\">";
                         echo "<div>";
                         echo '<img src="../products-images/' . $location . '" alt="">';

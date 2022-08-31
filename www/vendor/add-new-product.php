@@ -13,7 +13,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '2') {
     <form class="container-sm d-flex align-items-center align-self-center flex-column rounded shadow p outside-box" action="add-new-product-include.php" enctype="multipart/form-data" method="post">
         <div class="form-floating mb-3">
             <label for="product-name" class="add-new-product-label">Product Name</label>
-            <input type="text" class="form-control" id="product-name" name="product-name" minlength="10" maxlength="20">
+            <input type="text" class="form-control" id="product-name" name="product-name">
         </div>
         <div class="form-floating mb-3">
             <label for="price" class="add-new-product-label">Price</label>

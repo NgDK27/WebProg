@@ -26,13 +26,14 @@ include('../includes/header.php');
     </div>
 
     <button type="submit" class="btn btn-primary btn-lg" name="submit" id="submit">Login</button>
-    
+
     <p id="create-account">
       Not registered?
       <a href="../register/register-customer.php">Create an account</a>
     </p>
   </form>
 </div>
+<script src="login.js"></script>
 <?php
 include('../includes/footer.php');
 ?>

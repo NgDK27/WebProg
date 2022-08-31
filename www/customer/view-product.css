@@ -1,46 +1,46 @@
 body {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 #product-list {
-  margin: 3rem 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 input {
-  font-size: 14px !important;
+    font-size: 14px !important;
 }
 
 #submit {
-  width: 6rem;
-  background-color: #f57224;
-  border-color: #dd6720;
-  font-size: 12px;
+    width: 6rem;
+    background-color: #f57224;
+    border-color: #dd6720;
+    font-size: 12px;
 }
 
 #submit:hover {
-  background-color: #40a9ff;
-  border-color: #40a9ff;
+    background-color: #40a9ff;
+    border-color: #40a9ff;
 }
 
 a:hover {
-  color: #3b9cb7;
+    color: #3b9cb7;
 }
 
 #form-container {
-  max-width: 80%;
-  margin: 2rem auto;
-  display: flex;
-  justify-content: space-between;
+    max-width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .form-container {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
-.input-container input{
+.input-container input {
     width: 100%;
 }
 
@@ -54,18 +54,25 @@ a:hover {
     height: 50%;
 }
 
-#name-search, b{
+.product {
+    width: 30rem;
+    height: 30rem;
+}
 
+img {
+    height: 30rem;
+    width: auto;
+    max-width: 500px;
 }
 
 @media only screen and (max-width: 1023px) {
-  #product-list {
-    grid-template-columns: 1fr 1fr;
-  }
+    #product-list {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-  #product-list {
-    grid-template-columns: 1fr;
-  }
+    #product-list {
+        grid-template-columns: 1fr;
+    }
 }
