@@ -12,20 +12,20 @@ input {
     font-size: 14px !important;
 }
 
-#submit {
+.btn {
     width: 6rem;
     background-color: #f57224;
     border-color: #dd6720;
     font-size: 12px;
 }
 
-#submit:hover {
-    background-color: #40a9ff;
-    border-color: #40a9ff;
+.btn:hover {
+    background-color: #f57224;
+    border-color: #dd6720;
 }
 
 a:hover {
-    color: #3b9cb7;
+    color: #f57224;
 }
 
 #form-container {
