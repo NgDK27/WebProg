@@ -16,7 +16,9 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             <div id="cart-container" class="container-sm p-4 d-flex align-self-center flex-column rounded shadow p outside-box bg-white">
                 <div>
                     <ul id="item-list">
-                      <li><h2>Total item(s): <span id="pp"></span></h2></li>
+                        <li>
+                            <h2>Total item(s): <span id="totalItems"></span></h2>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -24,7 +26,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
         <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
             <div id="checkout-container" class="container-sm p-3 d-flex align-self-top flex-column rounded shadow p outside-box bg-white">
                 <div class="d-flex justify-content-between">
-                    <p>Total price: 
+                    <p>Total price:
                     <p>₫<span id="total"></span></p>
                 </div>
                 <div class="form-container align-items-center align-self-center">
@@ -33,6 +35,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                         <button type="submit" class="btn btn-primary btn-lg" id="complete-order">Complete Order</button>
                     </form>
                 </div>
+                <p class="text-center mb-0">or</p>
                 <a href="view-product.php" class="text-center" id="continue">Continue Shopping</a>
             </div>
 

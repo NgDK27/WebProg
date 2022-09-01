@@ -20,37 +20,37 @@
                 <ul class="navbar-nav">
                     <?php if (!isset($_SESSION['user-type'])) : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/login/login.php">Login</a>
+                            <a class="nav-link text-uppercase" href="/login/login.php">Login</a>
                         </li>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "1") : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/customer/view-product.php">View product</a>
+                            <a class="nav-link text-uppercase" href="/customer/view-product.php">View product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/customer/cart.php">Cart</a>
+                            <a class="nav-link text-uppercase" href="/customer/cart.php">Cart</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/my-account/my-account.php">My account</a>
+                            <a class="nav-link text-uppercase" href="/my-account/my-account.php">My account</a>
                         </li>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "2") : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/vendor/view-product.php">View product</a>
+                            <a class="nav-link text-uppercase" href="/vendor/view-product.php">View product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/vendor/add-new-product.php">Add new product</a>
+                            <a class="nav-link text-uppercase" href="/vendor/add-new-product.php">Add new product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/my-account/my-account.php">My account</a>
+                            <a class="nav-link text-uppercase" href="/my-account/my-account.php">My account</a>
                         </li>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "3") : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/shipper/view-order.php">View orders</a>
+                            <a class="nav-link text-uppercase" href="/shipper/view-order.php">View orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/my-account/my-account.php">My account</a>
+                            <a class="nav-link text-uppercase" href="/my-account/my-account.php">My account</a>
                         </li>
                     <?php endif; ?>
                 </ul>
