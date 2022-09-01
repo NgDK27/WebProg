@@ -67,7 +67,7 @@ let productDetails = document.querySelectorAll(".product");
 
 productDetails.forEach((detail) => {
   // let productPrice = productDetails.getElementsByTagName("h3")[4].textContent;
-  let productPrice = Number(detail.children[2].textContent);
+  let productPrice = Number(detail.children[3].textContent);
   total += productPrice;
 });
 
