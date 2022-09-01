@@ -9,7 +9,6 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <h1 class="text-center">Your Cart</h1>
-<span id="quantity"></span>
 <div class="container">
 
     <div class="row">
@@ -17,7 +16,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             <div id="cart-container" class="container-sm p-4 d-flex align-self-center flex-column rounded shadow p outside-box bg-white">
                 <div>
                     <ul id="item-list">
-                      <li><h2>Item lists:</h2></li>
+                      <li><h2>Total item(s): <span id="pp"></span></h2></li>
                     </ul>
                 </div>
             </div>

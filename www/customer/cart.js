@@ -74,6 +74,18 @@ productDetails.forEach((detail) => {
 const totalPrice = document.getElementById("total");
 totalPrice.append(total);
 
+// Count products
+let pp = 0;
+
+productDetails.forEach((detail) => {
+  let productCount = Number(detail.children[2].textContent);
+  pp += productCount;
+});
+
+const totalProducts = document.getElementById("pp");
+totalProducts.append(pp);
+
+
 // Clear the localstorage after finish order
 
 const completeOrderButton = document.getElementById("complete-order");
