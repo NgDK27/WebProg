@@ -19,13 +19,15 @@ for (let i = 0; i < localStorage.length; i++) {
     ul.appendChild(li);
   }
 
-  removeButton = document.createElement("span");
   remove = document.createElement("button");
-  remove.append("Remove");
-  removeButton.setAttribute("class", "remove-button");
-  remove.setAttribute("class", "remove-btn");
-  removeButton.append(remove);
-  li.appendChild(removeButton);
+  removeButton = document.createElement("span");
+  hr = document.createElement("hr");
+  removeButton.setAttribute("class", "bi bi-trash");
+  remove.setAttribute("class", "btn btn-light btn-lg");
+  remove.appendChild(removeButton);
+  remove.append(" Remove")
+  li.appendChild(remove);
+  li.appendChild(hr)
 
   // Add item to the form
 
@@ -39,12 +41,12 @@ for (let i = 0; i < localStorage.length; i++) {
 
 // Remove item from cart
 
-removeBtn = document.querySelectorAll(".remove-btn");
+removeBtn = document.querySelectorAll(".btn");
 removeBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     let productRemove = btn.parentNode.parentNode;
     let idProductRemove =
-      productRemove.getElementsByTagName("h3")[3].textContent;
+      productRemove.getElementsByTagName("h2")[3].textContent;
     for (var i = 0, len = localStorage.length; i < len; ++i) {
       const id = localStorage.key(i);
       if (id.includes(idProductRemove)) {
