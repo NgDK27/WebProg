@@ -73,3 +73,4 @@ foreach ($myfiles as $filename) {
     <?php
     include('../includes/footer.php');
     ?>
+</body>
