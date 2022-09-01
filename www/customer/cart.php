@@ -17,7 +17,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             <div id="cart-container" class="container-sm p-4 d-flex align-self-center flex-column rounded shadow p outside-box bg-white">
                 <div>
                     <ul id="item-list">
-                      
+                      <li><h2>Item lists:</h2></li>
                     </ul>
                 </div>
             </div>

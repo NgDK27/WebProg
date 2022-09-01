@@ -9,9 +9,11 @@ for (let i = 0; i < localStorage.length; i++) {
 
   const ul = document.getElementById("item-list");
   const li = document.createElement("li");
+  hr = document.createElement("hr");
+  li.appendChild(hr)
 
   for (const field in currentObject) {
-    detail = document.createElement("h2");
+    detail = document.createElement("h3");
     const data = currentObject[field];
     detail.append(data);
     li.append(detail);
@@ -21,13 +23,11 @@ for (let i = 0; i < localStorage.length; i++) {
 
   remove = document.createElement("button");
   removeButton = document.createElement("span");
-  hr = document.createElement("hr");
   removeButton.setAttribute("class", "bi bi-trash");
   remove.setAttribute("class", "btn btn-light btn-lg");
   remove.appendChild(removeButton);
   remove.append(" Remove")
   li.appendChild(remove);
-  li.appendChild(hr)
 
   // Add item to the form
 
@@ -46,7 +46,7 @@ removeBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     let productRemove = btn.parentNode.parentNode;
     let idProductRemove =
-      productRemove.getElementsByTagName("h2")[3].textContent;
+      productRemove.getElementsByTagName("h3")[3].textContent;
     for (var i = 0, len = localStorage.length; i < len; ++i) {
       const id = localStorage.key(i);
       if (id.includes(idProductRemove)) {
