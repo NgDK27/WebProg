@@ -44,7 +44,7 @@ removeBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     let productRemove = btn.parentNode.parentNode;
     let idProductRemove =
-      productRemove.getElementsByTagName("h3")[3].textContent;
+      productRemove.getElementsByTagName("h2")[3].textContent;
     for (var i = 0, len = localStorage.length; i < len; ++i) {
       const id = localStorage.key(i);
       if (id.includes(idProductRemove)) {
