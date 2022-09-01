@@ -11,7 +11,7 @@ include('../includes/header.php');
 ?>
 <link rel="stylesheet" href="login.css">
 
-<h1 class="text-center">Welcome to Lozodo, please Login!</h1>
+<h1 class="container text-end">Welcome to Lozodo, please Login!</h1>
 <div id="login-container">
 
   <form class="container w-auto d-flex align-items-center align-self-center flex-column rounded shadow outside-box bg-white" action="login-include.php" method="POST">

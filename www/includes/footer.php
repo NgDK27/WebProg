@@ -8,10 +8,10 @@
             <p class="col-md-4 mb-0 text-muted">© 2022 LOZODO</p>
 
             <ul class="nav col-md-5 justify-content-end">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Copyright</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Privacy</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Help</a></li>
+                <li class="nav-item"><a href="/info/about.php" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="/info/copyright.php" class="nav-link px-2 text-muted">Copyright</a></li>
+                <li class="nav-item"><a href="/info/privacy.php" class="nav-link px-2 text-muted">Privacy</a></li>
+                <li class="nav-item"><a href="/info/help.php" class="nav-link px-2 text-muted">Help</a></li>
             </ul>
         </div>
     </div>
