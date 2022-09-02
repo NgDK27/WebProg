@@ -19,7 +19,6 @@ addToCartButton.addEventListener("click", () => {
       name: productName,
       quantity: updatedQuantity,
       price: productPrice * updatedQuantity,
-      pic: productPic,
     };
     localStorage.setItem(productId, JSON.stringify(object));
     alert("Your item has been added to cart");
