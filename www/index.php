@@ -20,7 +20,6 @@ include './includes/header.php';
                     <a role="button" href="/shipper/view-order.php" class="btn btn-primary btn-lg" id="submit">VIEW ORDERS!</a>
                 <?php endif; ?>
             </div>
-
         </div>
     </div>
 
