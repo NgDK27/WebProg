@@ -4,13 +4,13 @@
 https://youtu.be/zfksgqawU4E
 
 # Contribution
-Bùi Khắc Tiến: 33%
+Bùi Khắc Tiến - s3925982: 33%
 
-Đào Anh Vũ: 33%
+Đào Anh Vũ - s3926187: 33%
 
-Nguyễn Đình Khải: 33%
+Nguyễn Đình Khải - s3925921: 33%
 
-Phạm Quang Huy: 1%
+Phạm Quang Huy - s3940676: 1%
 
 # Accounts
 - Customer
