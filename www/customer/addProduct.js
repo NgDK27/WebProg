@@ -1,3 +1,5 @@
+// Calculate products in cart and total price
+
 const addToCartButton = document.getElementById("addToCart");
 const productId = document.getElementById("id").textContent;
 const productName = document.getElementById("itemName").textContent;
@@ -19,7 +21,6 @@ addToCartButton.addEventListener("click", () => {
       name: productName,
       quantity: updatedQuantity,
       price: productPrice * updatedQuantity,
-      pic: productPic,
     };
     localStorage.setItem(productId, JSON.stringify(object));
     alert("Your item has been added to cart");

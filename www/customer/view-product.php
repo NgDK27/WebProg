@@ -52,6 +52,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             }
             fclose($readProductData);
 
+            // Returning product by price range
+
             if ((isset($_GET['min-price']) && isset($_GET['max-price']))) {
                 $count = 0;
                 foreach ($productData as $product) {
@@ -70,7 +72,7 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                             }
                         }
                         $count += 1;
-                        echo "<li class=\"product container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow-sm outside-box m-4 bg-white\">";
+                        echo "<li class=\"container-sm d-flex text-center align-items-center align-self-center flex-column rounded shadow-sm outside-box m-4 bg-white\">";
                         echo "<a href= \"product-detail.php?id=$id\" class=\"text-decoration-none\">";
                         echo "<div>";
                         echo '<img src="../products-images/' . $location . '" alt="">';
@@ -91,6 +93,9 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                 if ($count == 0) {
                     echo "No result found";
                 }
+
+            // Returning product by name search
+
             } else if (isset($_GET['input-name'])) {
                 $userInput = strtolower($_GET['input-name']);
                 foreach ($productData as $product) {
@@ -126,6 +131,9 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                         echo "</li>";
                     }
                 }
+                
+            // Default products
+
             } else {
                 foreach ($productData as $product) {
                     $id = $product[0];

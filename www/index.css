@@ -1,0 +1,33 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url("homepage-images/bg.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+#submit {
+    width: 16rem;
+    margin-top: 20px;
+    padding: 12px;
+    text-transform: uppercase;
+    background-color: #f57224;
+    border-color: #dd6720;
+    font-size: 16px;
+}
+
+#submit:hover {
+    background-color: #dd6720;
+}

@@ -62,7 +62,6 @@ a:hover {
 img {
     height: 30rem;
     width: auto;
-    max-width: 500px;
 }
 
 #product-list li:hover {
