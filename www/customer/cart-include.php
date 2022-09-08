@@ -1,4 +1,3 @@
-<title>Cart</title>
 <?php
 session_start();
 if (isset($_POST)) {
@@ -32,4 +31,3 @@ if (isset($_POST)) {
    <a href='view-product.php'>Go back</a>
    </button>";
 }
-
