@@ -21,13 +21,13 @@ for (let i = 0; i < localStorage.length; i++) {
     ul.appendChild(li);
   }
 
-  remove = document.createElement("button");
   removeButton = document.createElement("span");
+  remove = document.createElement("button");
+  remove.append(" Remove")
   removeButton.setAttribute("class", "bi bi-trash");
   remove.setAttribute("class", "btn btn-light btn-lg");
-  remove.appendChild(removeButton);
-  remove.append(" Remove")
-  li.appendChild(remove);
+  removeButton.append(remove);
+  li.appendChild(removeButton);
 
   // Add item to the form
 
