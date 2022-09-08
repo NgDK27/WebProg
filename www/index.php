@@ -10,6 +10,9 @@ include './includes/header.php';
         <div class="container text-center">
             <div class="text">
                 <h1>Welcome to LOZODO!</h1>
+
+                <!-- Button types for different users -->
+
                 <?php if (isset($_SESSION['user-type']) && $_SESSION['user-type'] == "1") : ?>
                     <a role="button" href="/customer/view-product.php" class="btn btn-primary btn-lg" id="submit">SHOP NOW!</a>
                 <?php endif; ?>

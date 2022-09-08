@@ -5,6 +5,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
     header("Location: ../my-account/my-account.php?error=invalidaccount");
 }
 
+// Get product information
+
 $readProductData = fopen("../data/product.db", 'r');
 flock($readProductData, LOCK_SH);
 $productData = array();

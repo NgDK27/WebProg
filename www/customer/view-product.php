@@ -52,6 +52,8 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
             }
             fclose($readProductData);
 
+            // Returning product by price range
+
             if ((isset($_GET['min-price']) && isset($_GET['max-price']))) {
                 $count = 0;
                 foreach ($productData as $product) {
@@ -91,6 +93,9 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                 if ($count == 0) {
                     echo "No result found";
                 }
+
+            // Returning product by name search
+
             } else if (isset($_GET['input-name'])) {
                 $userInput = strtolower($_GET['input-name']);
                 foreach ($productData as $product) {
@@ -126,6 +131,9 @@ if (!isset($_SESSION['username']) || $_SESSION['user-type'] != '1') {
                         echo "</li>";
                     }
                 }
+                
+            // Default products
+
             } else {
                 foreach ($productData as $product) {
                     $id = $product[0];

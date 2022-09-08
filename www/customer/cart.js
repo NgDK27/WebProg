@@ -66,7 +66,6 @@ let total = 0;
 let productDetails = document.querySelectorAll(".product");
 
 productDetails.forEach((detail) => {
-  // let productPrice = productDetails.getElementsByTagName("h3")[4].textContent;
   let productPrice = Number(detail.children[3].textContent);
   total += productPrice;
 });
@@ -75,6 +74,7 @@ const totalPrice = document.getElementById("total");
 totalPrice.append(total);
 
 // Count products
+
 let totalItems = 0;
 
 productDetails.forEach((detail) => {

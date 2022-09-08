@@ -8,3 +8,12 @@ h1 {
     margin-bottom: 10px;
     font-size: 30px;
 }
+
+#help-link {
+    color: skyblue;
+    text-decoration: none;
+}
+
+#help-link:hover {
+    text-decoration: underline;
+}

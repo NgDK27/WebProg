@@ -1,7 +1,7 @@
-# WebProg
+# COSC2430 Web Programing 1 - Assignment Group 15 - Full Stack Web Application
  
 # Demo video
-https://youtu.be/zfksgqawU4E
+https://youtu.be/mcvfoyTr_YM
 
 # Contribution
 Bùi Khắc Tiến - s3925982: 33%
