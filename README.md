@@ -1,7 +1,7 @@
 # COSC2430 Web Programing 1 - Assignment Group 15 - Full Stack Web Application
  
 # Demo video
-https://youtu.be/mcvfoyTr_YM
+https://youtu.be/Z4Nf0A7h3Sw
 
 # Contribution
 Bùi Khắc Tiến - s3925982: 33%
@@ -11,6 +11,12 @@ Bùi Khắc Tiến - s3925982: 33%
 Nguyễn Đình Khải - s3925921: 33%
 
 Phạm Quang Huy - s3940676: 1%
+
+# Instructions
+- Open folder /www/ in your IDE
+- Open terminal
+- Type "php -S localhost:8000"
+- Access http://localhost:8000/ on your browser
 
 # Accounts
 - Customer
@@ -30,12 +36,6 @@ Password: Shipper!23
 Username: Vendor01
 
 Password: Test!1234
-
-# Instructions
-- Open folder /www/ in your IDE
-- Open terminal
-- Type "php -S localhost:8000"
-- Access http://localhost:8000/ on your browser
 
 # Databases
 - accounts.db: 
